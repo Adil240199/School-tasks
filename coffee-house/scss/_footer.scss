@@ -1,0 +1,160 @@
+footer {
+  margin-top: 96px;
+  display: flex;
+  height: auto;
+  padding: 100px;
+  border-radius: 40px;
+  gap: 99.5px;
+  background-color: rgba(102, 95, 85, 1);
+  @include center;
+  @media (max-width: 768px) {
+    display: block;
+    max-width: 82.5%;
+    margin-top: 104px;
+    padding: 60px;
+  }
+  @media (max-width: 380px) {
+    padding: 0px;
+    margin-top: 100px;
+    padding-top: 39.5px;
+    padding-bottom: 36px;
+    min-width: 100%;
+  }
+
+  .blockleft {
+    @media (max-width: 380px) {
+      padding-left: 16px;
+    }
+    h4 {
+      margin: 0px;
+      font-size: 3.75em;
+      font-weight: 600;
+      line-height: 75px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: rgba(225, 212, 201, 1);
+      @media (max-width: 768px) {
+        margin-top: 7%;
+      }
+      @media (max-width: 380px) {
+        font-size: 2em;
+        line-height: 40px;
+      }
+      .coffeeTimeWord {
+        font-style: italic;
+        color: rgba(176, 144, 122, 1);
+        margin-left: -6px;
+      }
+    }
+    .blockIconsSocial {
+      display: flex;
+      gap: 10px;
+      margin-top: 40px;
+      .wrappericon {
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        border: 1px solid rgba(193, 182, 173, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      @media (min-width: 381px) {
+        .wrappericon:hover {
+          background-color: rgba(225, 212, 201, 1);
+          cursor: pointer;
+          .iconSocMedia {
+            stroke: rgba(64, 63, 61, 1);
+          }
+        }
+      }
+    }
+  }
+  .blockRight {
+    padding-left: 37px;
+    padding-top: 34px;
+    @media (max-width: 768px) {
+      margin-top: 17.6%;
+      margin-bottom: 8%;
+      padding-left: 0;
+      padding-top: 0;
+    }
+    @media (max-width: 380px) {
+      margin-top: 11.1%;
+      padding-left: 16px;
+    }
+    .h5 {
+      margin: 0px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: rgba(225, 212, 201, 1);
+      margin-top: 32px;
+    }
+    .informAndContact {
+      position: relative;
+      display: flex;
+      gap: 7px;
+      padding-top: 39px;
+      cursor: pointer;
+      line-height: 1;
+
+      .textContact {
+        margin: 0px;
+        margin-left: 3px;
+
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(225, 212, 201, 1);
+        content: "";
+        transition: width 0.3s ease-out;
+      }
+      .textContact:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: rgba(225, 212, 201, 1);
+        content: "";
+        transition: width 0.3s ease-out;
+      }
+
+      @media (min-width: 381px) {
+        .textContact:hover:after,
+        .textContact:focus:after {
+          width: 70%;
+        }
+      }
+      .schedule {
+        margin-left: 0px;
+      }
+
+      @media (min-width: 381px) {
+        .schedule:hover:after,
+        .schedule:focus:after {
+          width: 105%;
+        }
+      }
+    }
+
+    .informAndContactFirst {
+      padding-top: 20px;
+    }
+    .informAndContactLast {
+      padding-top: 20px;
+    }
+    .iconContact {
+      margin-top: -4px;
+    }
+  }
+}

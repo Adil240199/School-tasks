@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.block1,
+.block2 {
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.block2 {
+  width: 100%;
+}
+
+.svgHang {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.nameGame {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.wordBlock {
+  width: 80%;
+  margin: 0 auto;
+  height: 30px;
+  margin-top: 5%;
+  box-sizing: border-box;
+}
+.under-score-span{
+  margin-right:15px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.hint {
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 16px;
+}
+
+.attemptBlock {
+  display: flex;
+  margin: 0 auto;
+  width: max-content;
+  font-size: 18px;
+}
+
+.attempt {
+  color: red;
+  font-weight: bold;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 10px;
+  max-width: 80%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+button {
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 600px) {
+  .block1,
+  .block2 {
+    width: 90%;
+  }
+}

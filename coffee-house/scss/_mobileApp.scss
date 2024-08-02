@@ -1,0 +1,147 @@
+.MobileApp {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 93px;
+  position: relative;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 11.9px;
+    display: inline-block;
+  }
+  .blockDownload {
+    margin-top: 83.9px;
+  }
+  h3 {
+    font-family: Inter;
+    font-size: 3.75em;
+    font-weight: 600;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: left;
+    @media (max-width: 380px) {
+      font-size: 2em;
+      line-height: 40px;
+      margin-bottom: 60px;
+    }
+    .downloadWord {
+      font-style: italic;
+      color: rgba(176, 144, 122, 1);
+    }
+  }
+  .aboutApp {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: -20px;
+    @media (max-width: 380px) {
+      text-align: left;
+      margin-top: -17px;
+    }
+  }
+  .blockLinksApp {
+    display: flex;
+    margin-top: 40px;
+    @media (max-width: 380px) {
+      display: inline-block;
+      margin-top: 23px;
+    }
+    .linkApp {
+      display: flex;
+      width: 200px;
+      height: 64px;
+      padding: 12px, 20px, 12px, 20px;
+      border-radius: 100px;
+      border: 1px;
+      gap: 8px;
+      margin-right: 20px;
+      border: 1px solid rgba(102, 95, 85, 1);
+      background-color: rgba(225, 212, 201, 1);
+      @media (max-width: 380px) {
+        height: 60px;
+        margin-bottom: 21px;
+      }
+
+      .linkText {
+        margin-left: 4px;
+        padding-top: 1px;
+        position: relative;
+        .available {
+          font-size: 10px;
+          font-weight: 600;
+          line-height: 14px;
+          letter-spacing: 0em;
+          text-align: left;
+          position: absolute;
+          top: -3px;
+          left: 6px;
+          white-space: nowrap;
+        }
+        .store {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0em;
+          text-align: left;
+          margin-top: -8px;
+          position: absolute;
+          top: 20px;
+          white-space: nowrap;
+          left: 6px;
+        }
+      }
+      .linkTextAndroid {
+        margin-left: -1px;
+      }
+      .iconApple {
+        width: 27.41px;
+        height: 32.65px;
+        margin: 13.5px 0px 0px 17.9px;
+      }
+      .iconPlayMarket {
+        width: 36px;
+        height: 36px;
+        margin: 13px 0px 0px 14px;
+      }
+    }
+    @media (min-width: 381px) {
+      .linkApp:hover {
+      background-color: rgba(102, 95, 85, 1);
+      svg {
+        fill: rgba(225, 212, 201, 1);
+        stroke: rgba(225, 212, 201, 1);
+        transition: 0.01s;
+      }
+      .store,
+      .available {
+        color: rgba(225, 212, 201, 1);
+      }
+    }
+  }
+  }
+  .blockImgMobiles {
+    @media (max-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      margin-top: 82px;
+      .imgMobiles {
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 104px;
+        width: 90.5%;
+      }
+    }
+    @media (max-width: 380px) {
+      margin-top: 11px;
+      .imgMobiles {
+        margin-top: 24.7px;
+        width: 98.9%;
+      }
+    }
+  }
+}

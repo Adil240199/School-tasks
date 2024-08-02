@@ -1,0 +1,205 @@
+header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  @include center;
+  @media (max-width: 768px) {
+    justify-content: space-between;
+  }
+
+  .blocklogo {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    z-index: 9999;
+    .ellipseLogo {
+      @include positionAbsolute(6px);
+    }
+    .resourceLogo {
+      @include positionAbsolute(12.56px);
+    }
+    .textLogo {
+      @include positionAbsolute(46.1px);
+      min-width: max-content;
+      font-size: 8.6px;
+    }
+  }
+  .adaptivMenu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transform: translateX(0%);
+    @media (max-width: 768px) {
+      min-height: max-content;
+      position: absolute;
+      top: 0px;
+      left: -1px;
+      transform: translateX(100%);
+      transition: transform 1s;
+      width: 101%;
+      z-index: 999;
+      flex-direction: column;
+      background-color: rgba(225, 212, 201, 1);
+      @include center;
+    }
+  }
+  .navHeader {
+    display: flex;
+    justify-content: center;
+    gap: 21px;
+    width: 100%;
+    max-width: 1188px;
+    margin-left: 7px;
+    @media (max-width: 768px) {
+      margin-left: 0px;
+      z-index: 9999;
+      flex-direction: column;
+      justify-content: center;
+      background-color: inherit;
+      margin-top: 154px;
+    }
+    .linkHeader {
+      color: rgba(64, 63, 61, 1);
+      font-family: "Inter";
+      font-size: 1em;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0em;
+      padding-top: 6px;
+      @media (max-width: 768px) {
+        font-size: 2em;
+        line-height: 40px;
+      }
+    }
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    line-height: 1;
+    @media (max-width: 768px) {
+      @include center;
+      margin-bottom: 22px;
+    }
+  }
+  .rightLinkHeader {
+    position: relative;
+    .cupCoffee {
+      @media (max-width: 380px) {
+        display: block;
+      }
+    }
+  }
+  .rightLinkHeader:hover + .cupCoffee {
+    display: block;
+    top: 5px;
+  }
+  .rightLinkHeader {
+    width: 72px;
+    height: 28px;
+    position: relative;
+    @media (max-width: 768px) {
+      margin-top: 77px;
+      display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 148px;
+    }
+  
+    .linkMenu {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: rgba(64, 63, 61, 1);
+      text-decoration: none;
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .cupCoffee {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      opacity: 0;
+      @media (max-width: 768px) {
+        opacity: 1;
+        position: static;
+        width: 40px;
+        margin-left: 15px;
+      }
+    }
+  }
+  .rightLinkHeader:hover {
+    .cupCoffee {
+      opacity: 1;
+    }
+  }
+
+  .burgerButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    border: solid 1px rgba(102, 95, 85, 1);
+    position: relative;
+    z-index: 999;
+  
+    &:before,
+    &:after {
+      transition: transform 1s;
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 1.5px;
+      background-color: rgba(64, 63, 61, 1);
+      border-radius: 5px;
+      transform-origin:left;
+    }
+  
+    &:before {
+      transform: rotate(0deg);
+      top: 37%;
+      left: 35%;
+    }
+  
+    &:after {
+      transform: rotate(-0deg);
+      top: 60%;
+      left: 35%;
+    }
+  
+    display: none;
+  
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  .burgerButtonActive {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  
+    &:before,
+    &:after {
+      transition: transform 1s;
+      transform-origin:  left;
+    }
+  
+    &:before {
+      
+      transform: rotate(40deg);
+    }
+  
+    &:after {
+      transform: rotate(-40deg);
+     
+    }
+  }
+}
+  

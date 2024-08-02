@@ -1,0 +1,96 @@
+.About {
+  width: 100%;
+  .textPlaceResource {
+    font-size: 3.75em;
+    font-weight: 600;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 100px;
+    word-spacing: -0.1px;
+    @media (max-width: 380px) {
+      font-size: 2em;
+      line-height: 40px;
+      margin-bottom: 59.5px;
+    }
+    .thePerfectWords {
+      font-style: italic;
+      color: rgba(176, 144, 122, 1);
+    }
+  }
+  .imagesResources {
+    display: flex;
+    position: relative;
+    gap: 40px;
+    margin-top: -20px;
+    @media (max-width: 768px) {
+      display: inline-block;
+      margin-top: -17px;
+    }
+    .imgBig {
+      max-width: 660px;
+      height: 590px;
+      border-radius: 20px;
+      @media (max-width: 768px) {
+        width: 688px;
+        max-width: 104%;
+        width: 104%;
+        height: 590px;
+      }
+      @media (max-width: 380px) {
+        width: 100%;
+      }
+    }
+    .imgSmall {
+      max-width: 660px;
+      height: 430px;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    .aboutOne,
+    .aboutThree {
+      margin-bottom: 37px;
+    }
+    .aboutOne,
+    .aboutThree,
+    .aboutTwo,
+    .aboutFour {
+      border-radius: 20px;
+      img {
+        border-radius: 20px;
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        @media (max-width: 768px) {
+          margin-top: -4px;
+          width: 97.9%;
+          height: 102%;
+
+          @media (max-width: 380px) {
+            margin-top: -14px;
+            margin-left: -151px;
+            width: 186.9%;
+            height: 107%;
+            transform:none;
+            }
+          }
+        }
+      }
+    }
+
+   @media (min-width: 381px) {
+  .aboutOne:hover,
+  .aboutThree:hover,
+  .aboutTwo:hover,
+  .aboutFour:hover {
+    img {
+      width: calc(100% + 5px);
+      transition: opacity 0.35s, transform 0.35s;
+      transform: scale(1.04);
+    }
+  }
+}
+ 
+}
+  
+

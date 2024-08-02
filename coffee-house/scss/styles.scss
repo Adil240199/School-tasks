@@ -1,0 +1,71 @@
+
+@import "../mixin";
+@import "./header";
+@import "./enjoy";
+@import "./favouritesCoffee";
+@import "./about";
+@import "./mobileApp";
+@import "./footer";
+html {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+* {
+  font-family: "Inter";
+  text-decoration: none;
+  color: rgba(64, 63, 61, 1);
+  scroll-behavior: smooth;
+  transition: 0.4s;
+  
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+body {
+  width: 100%;
+  background-color: rgba(225, 212, 201, 1);
+  overflow-x: hidden;
+}
+.container {
+  @include center;
+  padding: 20px 0px 40px 0px;
+  max-width: 1360px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 688px;
+  }
+  @media (max-width: 380px) {
+    width: 100%;
+    max-width: 348px;
+  }
+}
+.brDesktop {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.brTablet {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+  @media (max-width: 380px) {
+    display: none;
+  }
+}
+.brMob {
+  display: none;
+  @media (max-width: 380px) {
+    display: block;
+  }
+}
+.brDesktopTablet {
+  @media (max-width: 380px) {
+    display: none;
+  }
+}

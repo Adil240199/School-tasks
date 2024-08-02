@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <audio class="audio" src="./assets/sounds/assets_sounds_AquaCaelestis.mp3"></audio>
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <div class="progress-block">
+        <div class="progress"></div>
+    </div>
+      <ul class="play-list">
+        <li class="play-item">Aqua Caelestis</li>
+        <li class="play-item">River Flows In You</li>
+        <li class="play-item">Summer Wind</li>
+        <li class="play-item">Ennio Morricone</li>
+      </ul>
+    </div>
+
+
+    <div class="weather">
+      <input type="text"  class="Lng-city city"  placeholder="[Enter city]" value="Budapest">
+      <i class="weather-icon  owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="Enter name"/>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <button class="change-quote"></button>
+    <div>
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+
+    <div class="setting"> <select name="select" class="block_lang">
+      <option value="en">En</option>
+      <option value="ru">Ru</option>
+     </select>
+    <ul class="hiden-block">
+      <li class="item-hiden-block">Audio
+       <!--скопирован чужой код для тумблера (переключателя)так как не хотел тратить на это много времени-->
+	      <div style="text-align:center">
+          <div class="zadekides-naxamopud">
+          <input type="checkbox" checked="" onchange="T.toggleToobarStatus()" value="1" name="status" class="input-checkbox" id="toolbar-active">
+          <div class="kalsetuoigu-kevasukopmad">
+          <span class="perekligas-vk">OFF</span>
+          <span class="perekligas-vu">ON</span>
+          </div>
+          </div>
+          </div>
+      </li>
+      <li class="item-hiden-block">Weather
+        <div style="text-align:center">
+          <div class="zadekides-naxamopud">
+          <input type="checkbox" checked="" onchange="T.toggleToobarStatus()" value="1" name="status" class="input-checkbox" id="toolbar-active">
+          <div class="kalsetuoigu-kevasukopmad">
+          <span class="perekligas-vk">OFF</span>
+          <span class="perekligas-vu">ON</span>
+          </div>
+          </div>
+          </div>
+      </li>
+      <li class="item-hiden-block">Date
+        <div style="text-align:center">
+          <div class="zadekides-naxamopud">
+          <input type="checkbox" checked="" onchange="T.toggleToobarStatus()" value="1" name="status" class="input-checkbox" id="toolbar-active">
+          <div class="kalsetuoigu-kevasukopmad">
+          <span class="perekligas-vk">OFF</span>
+          <span class="perekligas-vu">ON</span>
+          </div>
+          </div>
+          </div>
+      </li>
+      <li class="item-hiden-block">Greeting
+        <div style="text-align:center">
+          <div class="zadekides-naxamopud">
+          <input type="checkbox" checked="" onchange="T.toggleToobarStatus()" value="1" name="status" class="input-checkbox" id="toolbar-active">
+          <div class="kalsetuoigu-kevasukopmad">
+          <span class="perekligas-vk">OFF</span>
+          <span class="perekligas-vu">ON</span>
+          </div>
+          </div>
+          </div>
+      </li>
+    </ul>
+       </div>
+    <img class="setting-icon" src="./assets/svg/sETTING.png" alt="setting-icon">
+    <img src="./assets/svg/todolist.png" alt="todo" class="todo-icon">
+    <div class="todo_list">
+      <h5>ToDo list</h1>
+     <div class="create_new_todo">
+         <input type="text" class="message" placeholder="Описание">
+         <button class="add">Добавить</button>
+     </div>
+     
+     <div class="wrapper">
+         <ul class="todo"></ul>
+     </div>
+
+ </div>
+  </footer>
+  <script type="module" src="js/script.js "></script>
+  
+</body>
+</html>

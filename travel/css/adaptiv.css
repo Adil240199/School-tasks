@@ -1,0 +1,501 @@
+@media only screen and (max-width:391px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  * {
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  .story_image,
+  .menu,
+  .destination_1,
+  .destination_2,
+  .destination_3,
+  .text_logo,
+  .explore_world,
+  .sub_text,
+  .text_desktop,
+  .indicator {
+    display: none;
+  }
+
+  body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 390px;
+    background-color: #fff;
+    position: relative;
+    margin: 0 auto
+  }
+
+  header {
+    max-width: 100%;
+    height: 100%;
+    min-height: 253px;
+    background-image: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%), url(../Images/img_mobile/phone.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    background-attachment: scroll;
+    padding-top: 43px;
+    position: relative;
+  }
+
+  .top {
+    background-color: rgba(242, 120, 92, 0.0);
+    min-width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu_mobile {
+    display: flex;
+    margin: 0.5px;
+    max-width: 165px;
+    max-height: 100%;
+    height: auto;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    position: fixed;
+    transform: translateX(100%);
+    transition: transform 0.2s;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    background: #F2785C;
+    color: white;
+    list-style: none;
+    box-shadow: 0px 4px 3px 0px rgba(13, 96, 111, 0.25);
+  }
+
+  .items {
+    margin-top: 44px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+  }
+
+  .menu_items {
+    float: right;
+    font-style: 16px;
+    font-style: 'Red Hat Text', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .button_close {
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    color: floralwhite;
+  }
+
+  .close_icon {
+    cursor: pointer;
+    margin-top: 15.54px;
+    margin-left: 15.45px;
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
+
+  .burger {
+    cursor: pointer;
+    margin-right: 20px;
+    display: block;
+    width: 35px;
+    height: 32px;
+    position: relative;
+    padding-top: 8px;
+    padding-left: 4.38px;
+
+  }
+
+  .burger:before,
+  .burger:after {
+    content: ' ';
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 26.25px;
+    height: 2.67px;
+    border-radius: 10px;
+  }
+
+  .burger::before {
+    top: 4px;
+  }
+
+  .burger::after {
+    bottom: 18px;
+  }
+
+  span {
+    top: 12px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 26.25px;
+    height: 2.67px;
+    border-radius: 10px;
+  }
+
+  .icon_vector {
+    margin-left: 16px;
+    width: 29px;
+    height: 30px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  li a {
+    font-family: 'Red Hat Text', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+  }
+
+  .button_login {
+    display: none;
+  }
+
+  h2 {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Red Hat Text', sans-serif;
+    color: #F2785C;
+    text-align: center;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+  }
+
+  #preview {
+    display: inline;
+
+  }
+
+  .search_input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 48px;
+    margin-top: 67px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 16.55px;
+    padding-right: 9px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    position: relative;
+  }
+
+  .form_search {
+    flex: 1;
+    max-width: 100%;
+    background: initial;
+    font-style: 'Aleo', serif;
+    border: none;
+  }
+
+  .form_search::placeholder {
+    font-size: 14px;
+    color: #F2785C;
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .start_search {
+    width: 92px;
+    height: 30px;
+    padding: 13, 5px 32, 5px;
+    font-weight: 500;
+    font-size: 11px;
+    border-radius: 10px;
+    font-family: 'Red Hat Text', sans-serif;
+    background-color: #0D606F;
+    border-style: none;
+    cursor: pointer;
+  }
+
+  .start_search:hover {
+    background-color: #09444e;
+  }
+
+  #steps {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 19px 70px;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+      "top     top   top"
+      "one     two   three"
+    ;
+  }
+
+  .steps_text {
+    grid-area: top;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .step_one {
+    margin: 0px;
+    grid-area: one;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .step_two {
+    margin: 0;
+    grid-area: two;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .step_three {
+    margin: 0;
+    grid-area: three;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .step_text {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: 'Aleo', serif;
+    color: #0D606F;
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+    background-color: #F2785C;
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  #destinations {
+    margin-top: 64px;
+    margin-bottom: 0px;
+    position: relative;
+    overflow: hidden;
+
+  }
+
+  .destination {
+    left: 0;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    transition: all ease 1s;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .destination1_mobile {
+    border-radius: 16px;
+    margin-right: 17px;
+    margin-left: 15px;
+  }
+
+  .text_subImg,
+  .text_subImg2,
+  .text_subImg3 {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-transform: uppercase;
+
+  }
+
+  .destanation_img {
+    position: relative;
+  }
+
+  .arrow,
+  .arrow_one {
+    position: absolute;
+    top: 113.54px;
+    cursor: pointer;
+    display: inline;
+  }
+
+  .arrow {
+    right: 26.27px;
+  }
+
+  .arrow_one {
+    left: 26.27px;
+  }
+
+  .indicator_mobile {
+    position: absolute;
+    left: 174px;
+    bottom: 52px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    width: 36px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .circle_mobile {
+    z-index: 100;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #F2785C;
+  }
+
+  .button_more {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92px;
+    height: 30px;
+    background-color: #0D606F;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .button_more:hover {
+    background-color: #0b515e;
+  }
+
+  .more_text {
+    margin-left: 10px;
+    font-size: 11px;
+    font-family: 'Red Hat Text', sans-serif;
+  }
+
+  .button_arrow {
+    Width: 8.75px;
+    Height: 5.63px;
+  }
+
+  .travel_store {
+    margin-top: 20px;
+  }
+
+  #stories {
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 13px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .story_1 {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .storyimg_mobile {
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    border-radius: 16px;
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  .description_story {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  h3 {
+    color: #0D606F;
+    font-size: 11px;
+    font-family: 'Aleo', serif;
+    font-weight: 700;
+  }
+
+  .text_mobile {
+    color: #0D606F;
+    font-size: 9px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 500;
+    line-height: 10.8px;
+  }
+
+  .bold {
+    color: #0D606F;
+    font-size: 11px;
+    font-family: 'Aleo', serif;
+    font-weight: 700;
+  }
+
+
+  footer {
+    background-image: url(../Images/img_mobile/phone2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+
+  }
+
+  .bottom {
+    max-width: 100%;
+    height: 65px;
+  }
+
+  .social_net {
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+  }
+
+  .school {
+    width: 50px;
+    height: 30px;
+
+  }
+
+  .icons {
+    width: 30px;
+    height: 30px;
+  }
+
+  .travel_portal {
+    display: none;
+  }
+
+  .social_icon {
+    margin-right: 24.21px;
+  }
+
+}
