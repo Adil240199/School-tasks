@@ -59,5 +59,3 @@
 - **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/virtual-keyboard)
 
 ---
-
-Если хочешь, я могу сделать этот `README.md` как файл или помочь вставить это в LinkedIn профиль. Сказать, если нужно что-то отредактировать!
