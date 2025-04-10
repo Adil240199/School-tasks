@@ -44,7 +44,7 @@
 
 ### 🔹 [Online Zoo Page](https://adil240199.github.io/School-tasks/online-zoo/pages/main/)
 - **Tech Stack**: HTML, CSS ,JS
-- **GitHub**: Not specified
+- **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/online-zoo)
 
 ---
 
