@@ -6,7 +6,7 @@
 
 ---
 
-### 🔹 [English School Platform](https://adil240199.github.io/Works/)
+### 🔹 [English School Platform]()
 - **Tech Stack**: React, Redux, SCSS  
 - **GitHub**: [View Code]()
 
