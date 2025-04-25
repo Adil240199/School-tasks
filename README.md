@@ -7,8 +7,8 @@
 ---
 
 ### 🔹 [English School Platform](https://school-drab-nine.vercel.app/)
-- **Tech Stack**: React, Redux, SCSS  
-- **GitHub**: [View Code]()
+- **Tech Stack**: React, Css, Hooks
+- **GitHub**: [View Code](https://github.com/Adil240199/school)
 
 ---
 
@@ -25,7 +25,7 @@
 ---
 
 ### 🔹 [Momentum App](https://adil240199.github.io/School-tasks/momentum/)
-- **Tech Stack**: JavaScript, CSS  
+- **Tech Stack**: JavaScript, CSS 
 - **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/momentum)
 
 ---
