@@ -12,50 +12,50 @@
 
 ---
 
-### 🔹 [CV Page](https://adil240199.github.io/School-tasks/cv-html/)
+### 🔹 [CV Page](https://adil240199.github.io/portfolio-links/cv-html/)
 - **Tech Stack**: HTML, CSS  
-- **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/cv-html)
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/cv-html)
 
 ---
 
-### 🔹 [Coffee House Landing Page](https://adil240199.github.io/School-tasks/coffee-house/home.html)
-- **Tech Stack**: HTML, SCSS , JS 
-- **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/coffee-house)
+### 🔹 [Coffee House Landing Page](https://adil240199.github.io/portfolio-links/coffee-house/home.html)
+- **Tech Stack**: HTML, SCSS, JS 
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/coffee-house)
 
 ---
 
-### 🔹 [Momentum App](https://adil240199.github.io/School-tasks/momentum/)
+### 🔹 [Momentum App](https://adil240199.github.io/portfolio-links/momentum/)
 - **Tech Stack**: JavaScript, CSS 
-- **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/momentum)
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/momentum)
 
 ---
 
-### 🔹 [Hangman Game](https://adil240199.github.io/School-tasks/hangman/)
+### 🔹 [Hangman Game](https://adil240199.github.io/portfolio-links/hangman/)
 - **Tech Stack**: JavaScript, CSS  
-- **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/hangman)
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/hangman)
 
 ---
 
-### 🔹 [Nonograms Puzzle Game](https://adil240199.github.io/School-tasks/nonograms/)
+### 🔹 [Nonograms Puzzle Game](https://adil240199.github.io/portfolio-links/nonograms/)
 - **Tech Stack**: JavaScript, CSS  
-- **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/nonograms)
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/nonograms)
 
 ---
 
-### 🔹 [Online Zoo Page](https://adil240199.github.io/School-tasks/online-zoo/pages/main/)
+### 🔹 [Demo School Project](https://adil240199.github.io/Works/)
+- **Tech Stack**: React, Redux, SCSS, CSS Modules, Hooks
+- **GitHub**: [View Code](https://github.com/Adil240199/Works)
+
+---
+
+### 🔹 [Online Zoo Page](https://adil240199.github.io/portfolio-links/online-zoo/pages/main/)
 - **Tech Stack**: HTML, CSS ,JS
-- **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/online-zoo)
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/online-zoo)
 
 ---
 
-### 🔹 [Travel Landing Page](https://adil240199.github.io/School-tasks/travel/)
+### 🔹 [Travel Landing Page](https://adil240199.github.io/portfolio-links/travel/)
 - **Tech Stack**: HTML, CSS , JS
-- **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/travel)
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/travel)
 
----
-
-### 🔹 [Virtual Keyboard App](https://adil240199.github.io/School-tasks/virtual-keyboard/)
-- **Tech Stack**: JavaScript, CSS 
-- **GitHub**: [View Code](https://github.com/Adil240199/School-tasks/tree/gh-pages/virtual-keyboard)
-
----
+----
