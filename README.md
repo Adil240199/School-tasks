@@ -6,7 +6,7 @@
 
 ---
 
-### 🔹 [English School Platform]()
+### 🔹 [English School Platform](https://school-drab-nine.vercel.app/)
 - **Tech Stack**: React, Redux, SCSS  
 - **GitHub**: [View Code]()
 
