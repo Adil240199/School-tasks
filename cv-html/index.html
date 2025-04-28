@@ -1,135 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/svg" href="./img/svg/Avatar.svg">
-    <title>Resume</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./img/svg/Avatar.svg" type="image/svg">
 </head>
 <body>
-    <section class="container">
-        <div class="header">
-          <img class="photo" src="./img/photo.jpeg" alt="#">
-          <nav class="contacts">
-            <h3 class="h_header">Contacts</h3>
-            <ul>
-                <li>
-                  <img class="svg"  src="./img/svg/mdi_call.svg" alt="mobile">
-                  <a class="contact" href="tel:+36 70 585 4018">+36 70 585 4018</a></li>
-                <li>
-                  <img class="svg" src="./img/svg/mdi_mail.svg" alt="mail">
-                  <a class="contact" href="mailto:igrok.nomer99@mail.ru">Adik.muhametov@gmail.com</a></li>
-                <li>
-                  <img class="svg" src="./img/svg/Symbol.svg" alt="discort">
-                  <p class="contact">Adil(Adil240199)Kz</p> </li>
-            </ul>
-          </nav>
-    
-          <nav class="contacts">
-            <h3 class="h_header">Skills</h3>
-            <ul>
-                <li>
-                  <h6>English</h6>
-                  <div>
-                    <progress class="line" value="50" max="100"></progress>
-                    <p class="contact">Intermediate</p>
-                  </div>
-                  </li>
-                <li>
-                  <h6>JavaScript</h6>
-                  <div>
-                    <progress class="line" value="55" max="100"></progress>
-                    <p class="contact">Normal</p>
-                  </div>
-                <li>
-                  <h6>Html</h6>
-                  <div>
-                    <progress class="line" value="70" max="100"></progress>
-                    <p class="contact">Normal</p>
-                  </div>
-                  </li>
-                  <li>
-                    <h6>Css</h6>
-                    <div>
-                      <progress class="line" value="55" max="100"></progress>
-                      <p class="contact">Normal</p>
-                    </div>
-                    </li>
-            </ul>
-          </nav>
-
-          <div class="projects-school">
-            <h3 class="header_sup-title">School projects</h3>
-            <ul class="projects" >
-              <li><a class="project" href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/nonograms/">Nonograms</a></li>
-              <li><a class="project" href="https://adil240199.github.io/rsschool-cv">Coffee-house</a></li>
-              <li><a class="project" href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/travel/">Travel</a></li>
-              <li><a class="project" href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/momentum/">Momentum</a></li>
-            </ul>
-            
-         </div>
-        </div>
-        <div class="main">
-          <div class= "my-skills">
-            <h3 class="sup-title">Hard skills</h3>
-            <ul class="hard-skill">
-            <li>- Basic knowledge of html, css and java script</li>
-            <li>- Made up a one-page layout from figma from video</li>
-            <li>- Solved initial problems in sololearn and codewars</li>
-            <li>- Basic knowledge of git and github</li>
-            <li>- Development tools: vs code and sublime text</li>
-            </ul>
+  <section class="container">
+    <aside class="sidebar">
+      <img class="avatar" src="./img/photo.jpeg" alt="Profile Photo">
       
-            <h3 class="sup-title">Soft skills</h3>
-              <ul class="soft-skill">
-              <li>- Ability to find a common language</li>
-              <li>- Stress resistant</li>
-              <li>- Perseverance in learning and problem solving</li>
-              <li>- Punctual</li>
-              <li>- Always ready to learn new things</li>
-            </ul>
-         </div>
-         <h3 class="sup-title">Task codewars:</h3>
-         <div class="my-code">
-           
-            <p class="example"><code>
-               function boolToWord( bool ){ 
-                if (bool === true) {
-                return("Yes"); 
-                } else {
-                return("No"); 
-              }}
-            </code> </p>
-            <p class="example"><code>
-              function multiply(a, b){ 
-                return a * b 
-             }
-            </code>
-            </p>
-         </div>
-    
-        
-            
-        </div>
-    
-        <footer class="footer">
-          <nav class="social_net">
-            <ul class="social_net">
-              <li>
-                <a class="social_icon" href="https://rs.school/js-stage0/"><img class="icons" src="./img/svg/rs_school_js.svg" alt="rsschool"></a>
-              </li>
-              <li>
-                <a class="social_icon" href="https://github.com/Adil240199?tab=repositories"><img class="icons" src="./img/svg/octocat.png" alt="github"></a>
-              </li>
-              <li>
-                <a class="social_icon" href="https://discord.gg/CFQhqw2G"><img class="icons" src="./img/svg/discord-icon.svg" alt="discord"></a>
-              </li>
-            </ul>
-           
-        </nav>
-        </footer>
-       </section> 
+      <nav class="section">
+        <h3>Contacts</h3>
+        <ul>
+          <li><img class="icon" src="./img/svg/mdi_call.svg" alt="Phone"><a href="tel:+36 70 585 4018">+36 70 585 4018</a></li>
+          <li><img class="icon" src="./img/svg/mdi_mail.svg" alt="Mail"><a href="mailto:igrok.nomer99@mail.ru">adik.muhametov@gmail.com</a></li>
+          <li><img class="icon" src="./img/svg/Symbol.svg" alt="Discord"><p>Adil(Adil240199)Kz</p></li>
+        </ul>
+      </nav>
+
+      <nav class="section">
+        <h3>Skills</h3>
+        <ul>
+          <li><h6>English</h6><progress value="50" max="100"></progress><p>Intermediate</p></li>
+          <li><h6>JavaScript</h6><progress value="55" max="100"></progress><p>Normal</p></li>
+          <li><h6>HTML</h6><progress value="70" max="100"></progress><p>Normal</p></li>
+          <li><h6>CSS</h6><progress value="55" max="100"></progress><p>Normal</p></li>
+        </ul>
+      </nav>
+
+      <div class="section">
+        <h3>School Projects</h3>
+        <ul class="projects">
+          <li><a href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/nonograms/">Nonograms</a></li>
+          <li><a href="https://adil240199.github.io/rsschool-cv">Coffee-house</a></li>
+          <li><a href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/travel/">Travel</a></li>
+          <li><a href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/momentum/">Momentum</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section>
+        <h3>Hard Skills</h3>
+        <ul>
+          <li>Basic knowledge of HTML, CSS, JavaScript</li>
+          <li>Layout from Figma based on video</li>
+          <li>Solving problems in SoloLearn and CodeWars</li>
+          <li>Basic Git and GitHub</li>
+          <li>Tools: VS Code, Sublime Text</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Communication</li>
+          <li>Stress resistance</li>
+          <li>Persistence</li>
+          <li>Punctuality</li>
+          <li>Open to learning</li>
+        </ul>
+      </section>
+
+      <section class="code">
+        <h3>Codewars Tasks</h3>
+        <pre><code>function boolToWord(bool) {
+  return bool ? "Yes" : "No";
+}</code></pre>
+        <pre><code>function multiply(a, b) {
+  return a * b;
+}</code></pre>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="socials">
+        <li><a href="https://rs.school/js-stage0/"><img src="./img/svg/rs_school_js.svg" alt="RS School"></a></li>
+        <li><a href="https://github.com/Adil240199?tab=repositories"><img src="./img/svg/octocat.png" alt="GitHub"></a></li>
+        <li><a href="https://discord.gg/CFQhqw2G"><img src="./img/svg/discord-icon.svg" alt="Discord"></a></li>
+      </ul>
+    </footer>
+  </section>
 </body>
 </html>
