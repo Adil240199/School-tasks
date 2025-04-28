@@ -1,188 +1,130 @@
-.container, .photo, .contacts, .social_net {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    color: black;
-  }
-  
-  body {
-    position: relative;
-    padding-top: 10px;
-    background-image: url(./img/sovremennie-tekhnologii-krasivie-10.jpg);
-    background-size: cover;
-  }
-  
-  .container {
-    filter: drop-shadow(0px 4px 4px #a9a9a9);
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 100% 10%;
-    grid-template-areas: "one  two"
-   "three three";
-    position: relative;
-  }
-  
-  .header {
-    grid-area: one;
-    background-color: #26272d;
-    position: relative;
-    padding: 30px 0 30px 0px
-  }
-  
-  .main {
-    position: relative;
-    grid-area: two;
-    background-color: #fff;
-    padding: 30px 10px 30px 10px
-  }
-  
-  .photo {
-    width: 170px;
-    margin-top: 5%;
-    display: block;
-    filter: drop-shadow(0px 5px 5px #727272);
-  }
-  
-  .contacts {
-    width: 170px;
-    margin-top: 5%;
-  }
-  
-  .contact {
-    color: #fff;
-  }
-  
-  a, p {
-    font-size: 12px;
-  }
-  
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 14px;
-  }
-  
-  .svg {
-    margin-right: 5px;
-    width: 20px;
-    height: 20px;
-  }
-  
-  .line {
-    background-color: white;
-    border-radius: 0px;
-    height: 3px;
-    width: 70px;
-  }
-  
-  h3 {
-    color: #fff;
-    padding-left: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #000000;
-    border-radius: 1px;
-  }
-  
-  h6 {
-    color: #fff;
-  }
-  .header_sup-title{
-    color: #fff;
-    border: 1px solid #ffffff;
-  }
-  .sup-title {
-    color: rgb(0, 0, 0);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
-  .h_header {
-    padding-left: 15px;
-    margin-bottom: 15px;
-    border: 1px solid white;
-    border-radius: 1px;
-  }
-  
-  .my-code {
-    position: relative;
-    display: flex;
-  }
-  
-  .projects-school {
+
+body {
+  background: url(./img/sovremennie-tekhnologii-krasivie-10.jpg) no-repeat center/cover;
+  padding-top: 10px;
+  color: black;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "sidebar content" "footer footer";
+  gap: 20px;
+  filter: drop-shadow(0 4px 4px #a9a9a9);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #26272d;
+  padding: 30px 10px;
+}
+
+.content {
+  grid-area: content;
+  background: white;
+  padding: 30px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #c7ac00;
+  padding: 10px;
+}
+
+.avatar {
+  width: 170px;
+  display: block;
+  margin: 5% auto;
+  filter: drop-shadow(0 5px 5px #727272);
+}
+
+.section {
+  margin-top: 5%;
+  width: 170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section h3 {
+  color: #fff;
+  border: 1px solid white;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+a, p {
+  font-size: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+progress {
+  width: 70px;
+  height: 3px;
+  background: white;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.code pre {
+  background: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socials img {
+  width: 40px;
+  height: 28px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "sidebar" "content" "footer";
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
   }
-  
+  .avatar {
+    width: 150px;
+    margin-top: 0;
+  }
   .projects {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .project {
-    font-size: 1rem;
-    color: #fff;
-  }
-  
-  .school {
-    text-align: center;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    border-radius: 1px;
-  }
-  
-  .footer {
-    grid-area: three;
-    height: 30px;
-    background-color: #c7ac00;
-  }
-  
-  .hard-skill {
-    margin-bottom: 5%;
-  }
-  
-  .social_net {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
   }
-  
-  .icons {
-    width: 40px;
-    height: 28px;
-  }
-  @media (max-width: 700px) {
-    .container{
-      width: 90%;
-    }
-    .header{
-      padding: 30px 4px 30px 5px
-    }
-    .photo{
-      width: 150px;
-      margin-top: 0%;
-    }
-    .my-code{
-      flex-direction: column;
-    }
-    .example{
-      margin-bottom: 20px;
-    }
-    .footer{
-      height: 35px;
-    }
-    .social_net li {
-      margin-top: 4px;
-    }
-    .social_net{
-      width: 70%;
-    }
-    .projects{
-      flex-wrap: wrap;
-    }
-  }
+}
