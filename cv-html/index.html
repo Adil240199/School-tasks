@@ -2,85 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./img/svg/Avatar.svg" type="image/svg">
+  <link rel="icon" type="image/svg" href="./img/svg/Avatar.svg">
+  <title>Resume</title>
 </head>
 <body>
-  <section class="container">
-    <aside class="sidebar">
-      <img class="avatar" src="./img/photo.jpeg" alt="Profile Photo">
-      
-      <nav class="section">
-        <h3>Contacts</h3>
-        <ul>
-          <li><img class="icon" src="./img/svg/mdi_call.svg" alt="Phone"><a href="tel:+36 70 585 4018">+36 70 585 4018</a></li>
-          <li><img class="icon" src="./img/svg/mdi_mail.svg" alt="Mail"><a href="mailto:igrok.nomer99@mail.ru">adik.muhametov@gmail.com</a></li>
-          <li><img class="icon" src="./img/svg/Symbol.svg" alt="Discord"><p>Adil(Adil240199)Kz</p></li>
+  <section class="resume">
+    <aside class="resume__sidebar">
+      <img class="resume__photo" src="./img/photo.jpeg" alt="Profile Photo">
+
+      <nav class="resume__section">
+        <h3 class="resume__section-title">Contacts</h3>
+        <ul class="resume__list">
+          <li class="resume__list-item">
+            <img class="resume__icon" src="./img/svg/mdi_call.svg" alt="Phone">
+            <a class="resume__link" href="tel:+36705854018">+36 70 585 4018</a>
+          </li>
+          <li class="resume__list-item">
+            <img class="resume__icon" src="./img/svg/mdi_mail.svg" alt="Email">
+            <a class="resume__link" href="mailto:adik.muhametov@gmail.com">adik.muhametov@gmail.com</a>
+          </li>
+          <li class="resume__list-item">
+            <img class="resume__icon" src="./img/svg/Symbol.svg" alt="Discord">
+            <p class="resume__text">Adil (Adil240199)Kz</p>
+          </li>
         </ul>
       </nav>
 
-      <nav class="section">
-        <h3>Skills</h3>
-        <ul>
-          <li><h6>English</h6><progress value="50" max="100"></progress><p>Intermediate</p></li>
-          <li><h6>JavaScript</h6><progress value="55" max="100"></progress><p>Normal</p></li>
-          <li><h6>HTML</h6><progress value="70" max="100"></progress><p>Normal</p></li>
-          <li><h6>CSS</h6><progress value="55" max="100"></progress><p>Normal</p></li>
+      <nav class="resume__section">
+        <h3 class="resume__section-title">Skills</h3>
+        <ul class="resume__list">
+          <li class="resume__list-item">
+            <h6 class="resume__skill-name">English</h6>
+            <div class="resume__progress">
+              <progress class="resume__progress-bar" value="50" max="100"></progress>
+              <p class="resume__skill-level">Intermediate</p>
+            </div>
+          </li>
+          <li class="resume__list-item">
+            <h6 class="resume__skill-name">JavaScript</h6>
+            <div class="resume__progress">
+              <progress class="resume__progress-bar" value="70" max="100"></progress>
+              <p class="resume__skill-level">Normal</p>
+            </div>
+          </li>
+          <li class="resume__list-item">
+            <h6 class="resume__skill-name">HTML</h6>
+            <div class="resume__progress">
+              <progress class="resume__progress-bar" value="75" max="100"></progress>
+              <p class="resume__skill-level">Good</p>
+            </div>
+          </li>
+          <li class="resume__list-item">
+            <h6 class="resume__skill-name">CSS</h6>
+            <div class="resume__progress">
+              <progress class="resume__progress-bar" value="70" max="100"></progress>
+              <p class="resume__skill-level">Good</p>
+            </div>
+          </li>
         </ul>
       </nav>
 
-      <div class="section">
-        <h3>School Projects</h3>
-        <ul class="projects">
-          <li><a href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/nonograms/">Nonograms</a></li>
-          <li><a href="https://adil240199.github.io/rsschool-cv">Coffee-house</a></li>
-          <li><a href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/travel/">Travel</a></li>
-          <li><a href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/momentum/">Momentum</a></li>
+      <div class="projects">
+        <h3 class="projects__title">School Projects</h3>
+        <ul class="projects__list">
+          <li><a class="projects__link" href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/nonograms/">Nonograms</a></li>
+          <li><a class="projects__link" href="https://adil240199.github.io/rsschool-cv">Coffee House</a></li>
+          <li><a class="projects__link" href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/travel/">Travel</a></li>
+          <li><a class="projects__link" href="https://rolling-scopes-school.github.io/adil240199-JSFEPRESCHOOL2022Q2/momentum/">Momentum</a></li>
         </ul>
       </div>
     </aside>
 
-    <main class="content">
-      <section>
-        <h3>Hard Skills</h3>
-        <ul>
-          <li>Basic knowledge of HTML, CSS, JavaScript</li>
-          <li>Layout from Figma based on video</li>
-          <li>Solving problems in SoloLearn and CodeWars</li>
-          <li>Basic Git and GitHub</li>
-          <li>Tools: VS Code, Sublime Text</li>
+    <main class="resume__main">
+      <section class="skills">
+        <h3 class="skills__title">Hard Skills</h3>
+        <ul class="skills__list">
+          <li class="skills__item">HTML5, CSS3 (SCSS, Modules)</li>
+          <li class="skills__item">JavaScript (ES6+), TypeScript</li>
+          <li class="skills__item">React, Redux, Next.js</li>
+          <li class="skills__item">Node.js (basic)</li>
+          <li class="skills__item">React Hooks, Functional Components</li>
+        </ul>
+
+        <h3 class="skills__title">Soft Skills</h3>
+        <ul class="skills__list">
+          <li class="skills__item">Teamwork and communication</li>
+          <li class="skills__item">Problem-solving</li>
+          <li class="skills__item">Stress resistance</li>
+          <li class="skills__item">Self-motivation and punctuality</li>
+          <li class="skills__item">Eager to learn and improve</li>
         </ul>
       </section>
 
-      <section>
-        <h3>Soft Skills</h3>
-        <ul>
-          <li>Communication</li>
-          <li>Stress resistance</li>
-          <li>Persistence</li>
-          <li>Punctuality</li>
-          <li>Open to learning</li>
-        </ul>
-      </section>
-
-      <section class="code">
-        <h3>Codewars Tasks</h3>
-        <pre><code>function boolToWord(bool) {
+      <section class="code-examples">
+        <h3 class="skills__title">Code Examples</h3>
+        <div class="code-examples__block">
+          <pre><code>function boolToWord(bool) {
   return bool ? "Yes" : "No";
 }</code></pre>
-        <pre><code>function multiply(a, b) {
+
+          <pre><code>function multiply(a, b) {
   return a * b;
 }</code></pre>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <ul class="socials">
-        <li><a href="https://rs.school/js-stage0/"><img src="./img/svg/rs_school_js.svg" alt="RS School"></a></li>
-        <li><a href="https://github.com/Adil240199?tab=repositories"><img src="./img/svg/octocat.png" alt="GitHub"></a></li>
-        <li><a href="https://discord.gg/CFQhqw2G"><img src="./img/svg/discord-icon.svg" alt="Discord"></a></li>
+      <ul class="footer__socials">
+        <li><a href="https://rs.school/js-stage0/"><img class="footer__icon" src="./img/svg/rs_school_js.svg" alt="RSSchool"></a></li>
+        <li><a href="https://github.com/Adil240199?tab=repositories"><img class="footer__icon" src="./img/svg/octocat.png" alt="GitHub"></a></li>
+        <li><a href="https://discord.gg/CFQhqw2G"><img class="footer__icon" src="./img/svg/discord-icon.svg" alt="Discord"></a></li>
       </ul>
     </footer>
   </section>
