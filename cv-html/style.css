@@ -22,36 +22,40 @@ body {
   color: #fff;
   width: 300px;
   padding: 20px;
-}
-
-.resume__main {
-  flex: 1;
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInLeft 0.8s ease;
 }
 
 .resume__photo {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
+  object-fit: cover;
 }
 
 .resume__section {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .resume__section-title {
   font-size: 20px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .resume__list {
   list-style: none;
+  width: 100%;
 }
 
 .resume__list-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  word-break: break-word;
 }
 
 .resume__icon {
@@ -63,40 +67,43 @@ body {
 .resume__link {
   color: #fff;
   text-decoration: none;
-  word-break: break-word;
-}
-
-.resume__link:hover {
+  transition: color 0.3s ease;
+  :hover {
+  color: #4db8ff;
   text-decoration: underline;
+  }
 }
 
 .resume__text {
   color: #fff;
 }
 
-.resume__skill-name {
+.skills {
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.skills__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills__list {
+  list-style: none;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skills__item {
   font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.resume__progress {
-  margin-bottom: 15px;
-}
-
-.resume__progress-bar {
-  width: 100%;
-  height: 8px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.resume__skill-level {
-  font-size: 12px;
-  margin-top: 5px;
 }
 
 .projects {
   margin-top: 30px;
+  animation: fadeInUp 0.8s ease;
 }
 
 .projects__title {
@@ -106,36 +113,21 @@ body {
 
 .projects__list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .projects__link {
   color: #4db8ff;
   text-decoration: none;
   display: block;
-  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .projects__link:hover {
-  text-decoration: underline;
-}
-
-.skills {
-  margin-bottom: 40px;
-}
-
-.skills__title {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.skills__list {
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.skills__item {
-  margin-bottom: 10px;
-  font-size: 16px;
+  color: #00aaff;
+  transform: translateX(5px);
 }
 
 .code-examples__block {
@@ -172,21 +164,52 @@ body {
 .footer__icon {
   width: 30px;
   height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.footer__icon:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
+  .resume {
+    flex-direction: column;
+  }
+
   .resume__sidebar {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
+    text-align: center;
   }
 
   .resume__main {
     padding: 20px;
   }
 
-  .skills__title {
-    text-align: center;
+  .skills__list,
+  .projects__list {
+    gap: 8px;
   }
 }
