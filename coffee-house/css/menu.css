@@ -6,9 +6,9 @@ footer {
   border-radius: 40px;
   gap: 99.5px;
   background-color: rgb(102, 95, 85);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
+
 @media (max-width: 768px) {
   footer {
     display: block;
@@ -17,280 +17,196 @@ footer {
     padding: 60px;
   }
 }
+
 @media (max-width: 380px) {
   footer {
-    padding: 0px;
+    padding: 39.5px 0 36px;
     margin-top: 100px;
-    padding-top: 39.5px;
-    padding-bottom: 36px;
-    min-width: 100%;
   }
 }
-@media (max-width: 380px) {
-  footer .blockleft {
-    padding-left: 16px;
-  }
-}
+
 footer .blockleft h4 {
-  margin: 0px;
+  margin: 0;
   font-size: 3.75em;
   font-weight: 600;
   line-height: 75px;
-  letter-spacing: 0em;
-  text-align: left;
   color: rgb(225, 212, 201);
 }
+
 @media (max-width: 768px) {
   footer .blockleft h4 {
     margin-top: 7%;
   }
 }
+
 @media (max-width: 380px) {
   footer .blockleft h4 {
     font-size: 2em;
     line-height: 40px;
   }
 }
-footer .blockleft h4 .coffeeTimeWord {
-  font-style: italic;
-  color: rgb(176, 144, 122);
-  margin-left: -6px;
-}
+
 footer .blockleft .blockIconsSocial {
   display: flex;
   gap: 10px;
   margin-top: 40px;
 }
+
 footer .blockleft .blockIconsSocial .wrappericon {
   width: 60px;
   height: 60px;
-  border-radius: 100px;
+  border-radius: 50%;
   border: 1px solid rgb(193, 182, 173);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 footer .blockleft .blockIconsSocial .wrappericon svg {
   width: 24px;
   height: 24px;
 }
-@media (min-width: 381px) {
-  footer .blockleft .blockIconsSocial .wrappericon:hover {
-    background-color: rgb(225, 212, 201);
-    cursor: pointer;
-  }
-  footer .blockleft .blockIconsSocial .wrappericon:hover .iconSocMedia {
-    stroke: rgb(64, 63, 61);
-  }
-}
+
 footer .blockRight {
   padding-left: 37px;
   padding-top: 34px;
 }
+
 @media (max-width: 768px) {
   footer .blockRight {
     margin-top: 17.6%;
-    margin-bottom: 8%;
     padding-left: 0;
-    padding-top: 0;
   }
 }
+
 @media (max-width: 380px) {
   footer .blockRight {
     margin-top: 11.1%;
     padding-left: 16px;
   }
 }
+
 footer .blockRight .h5 {
-  margin: 0px;
+  margin: 32px 0 0;
   font-size: 24px;
   font-weight: 600;
   line-height: 30px;
-  letter-spacing: 0em;
-  text-align: left;
   color: rgb(225, 212, 201);
-  margin-top: 32px;
 }
+
 footer .blockRight .informAndContact {
-  position: relative;
   display: flex;
   gap: 7px;
   padding-top: 39px;
   cursor: pointer;
-  line-height: 1;
+  position: relative;
 }
+
 footer .blockRight .informAndContact .textContact {
-  margin: 0px;
-  margin-left: 3px;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
   color: rgb(225, 212, 201);
-  content: "";
   transition: width 0.3s ease-out;
 }
+
 footer .blockRight .informAndContact .textContact:after {
-  display: block;
+  content: "";
   position: absolute;
   left: 0;
   width: 0;
   height: 2px;
   background-color: rgb(225, 212, 201);
-  content: "";
   transition: width 0.3s ease-out;
 }
-@media (min-width: 381px) {
-  footer .blockRight .informAndContact .textContact:hover:after,
-  footer .blockRight .informAndContact .textContact:focus:after {
-    width: 70%;
-  }
-}
+
 footer .blockRight .informAndContact .schedule {
-  margin-left: 0px;
-}
-@media (min-width: 381px) {
-  footer .blockRight .informAndContact .schedule:hover:after,
-  footer .blockRight .informAndContact .schedule:focus:after {
-    width: 105%;
-  }
-}
-footer .blockRight .informAndContactFirst {
-  padding-top: 20px;
-}
-footer .blockRight .informAndContactLast {
-  padding-top: 20px;
-}
-footer .blockRight .iconContact {
-  margin-top: -4px;
+  margin-left: 0;
 }
 
 header {
   height: 60px;
   display: flex;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
+
 @media (max-width: 768px) {
   header {
     justify-content: space-between;
   }
 }
+
 header .blocklogo {
-  position: relative;
   width: 100px;
   height: 60px;
+  position: relative;
   z-index: 9999;
 }
-header .blocklogo .ellipseLogo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 6px;
-}
-header .blocklogo .resourceLogo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 12.56px;
-}
+
+header .blocklogo .ellipseLogo,
+header .blocklogo .resourceLogo,
 header .blocklogo .textLogo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+header .blocklogo .resourceLogo {
+  top: 12.56px;
+}
+
+header .blocklogo .textLogo {
   top: 46.1px;
-  min-width: max-content;
   font-size: 8.6px;
 }
+
 header .adaptivMenu {
   display: flex;
   align-items: center;
   width: 100%;
-  transform: translateX(0%);
 }
+
 @media (max-width: 768px) {
   header .adaptivMenu {
-    min-height: max-content;
     position: absolute;
-    top: 0px;
+    top: 0;
     left: -1px;
     transform: translateX(100%);
     transition: transform 1s;
-    width: 101%;
-    z-index: 999;
     flex-direction: column;
     background-color: rgb(225, 212, 201);
-    margin-left: auto;
-    margin-right: auto;
+    z-index: 999;
   }
 }
+
 header .navHeader {
   display: flex;
   justify-content: center;
   gap: 21px;
   width: 100%;
   max-width: 1188px;
-  margin-left: 7px;
 }
-@media (max-width: 768px) {
-  header .navHeader {
-    margin-left: 0px;
-    z-index: 9999;
-    flex-direction: column;
-    justify-content: center;
-    background-color: inherit;
-    margin-top: 154px;
-  }
-}
+
 header .navHeader .linkHeader {
   color: rgb(64, 63, 61);
-  font-family: "Inter";
   font-size: 1em;
   font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0em;
-  padding-top: 6px;
 }
+
 @media (max-width: 768px) {
   header .navHeader .linkHeader {
     font-size: 2em;
-    line-height: 40px;
   }
 }
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  position: relative;
-  cursor: pointer;
-  line-height: 1;
-}
-@media (max-width: 768px) {
-  header nav a {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 22px;
-  }
-}
-header .rightLinkHeader {
-  position: relative;
-}
-@media (max-width: 380px) {
-  header .rightLinkHeader .cupCoffee {
-    display: block;
-  }
-}
-header .rightLinkHeader:hover + .cupCoffee {
-  display: block;
-  top: 5px;
-}
+
 header .rightLinkHeader {
   width: 72px;
   height: 28px;
   position: relative;
 }
+
 @media (max-width: 768px) {
   header .rightLinkHeader {
     margin-top: 77px;
@@ -300,26 +216,14 @@ header .rightLinkHeader {
     max-width: 148px;
   }
 }
-header .rightLinkHeader .linkMenu {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: rgb(64, 63, 61);
-  text-decoration: none;
-}
-@media (max-width: 768px) {
-  header .rightLinkHeader .linkMenu {
-    font-size: 2rem;
-  }
-}
+
 header .rightLinkHeader .cupCoffee {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   opacity: 0;
 }
+
 @media (max-width: 768px) {
   header .rightLinkHeader .cupCoffee {
     opacity: 1;
@@ -328,60 +232,43 @@ header .rightLinkHeader .cupCoffee {
     margin-left: 15px;
   }
 }
-header .rightLinkHeader:hover .cupCoffee {
-  opacity: 1;
-}
+
 header .burgerButton {
   width: 44px;
   height: 44px;
-  border-radius: 100px;
-  border: solid 1px rgb(102, 95, 85);
+  border-radius: 50%;
+  border: 1px solid rgb(102, 95, 85);
   position: relative;
   z-index: 999;
   display: none;
 }
-header .burgerButton:before, header .burgerButton:after {
-  transition: transform 1s;
+
+header .burgerButton:before,
+header .burgerButton:after {
   content: "";
   position: absolute;
   width: 16px;
   height: 1.5px;
   background-color: rgb(64, 63, 61);
   border-radius: 5px;
+  transition: transform 1s;
   transform-origin: left;
 }
-header .burgerButton:before {
-  transform: rotate(0deg);
-  top: 37%;
-  left: 35%;
-}
-header .burgerButton:after {
-  transform: rotate(0deg);
-  top: 60%;
-  left: 35%;
-}
+
 @media (max-width: 768px) {
   header .burgerButton {
     display: block;
   }
 }
+
 header .burgerButtonActive {
   display: none;
 }
+
 @media (max-width: 768px) {
   header .burgerButtonActive {
     display: block;
   }
-}
-header .burgerButtonActive:before, header .burgerButtonActive:after {
-  transition: transform 1s;
-  transform-origin: left;
-}
-header .burgerButtonActive:before {
-  transform: rotate(40deg);
-}
-header .burgerButtonActive:after {
-  transform: rotate(-40deg);
 }
 
 html {
@@ -410,21 +297,19 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0 40px;
   max-width: 1360px;
   width: 100%;
-  height: auto;
-  position: relative;
 }
+
 @media (max-width: 768px) {
   .container {
-    width: 100%;
     max-width: 688px;
   }
 }
+
 @media (max-width: 380px) {
   .container {
-    width: 100%;
     max-width: 348px;
   }
 }
@@ -438,11 +323,13 @@ body {
 .brTablet {
   display: none;
 }
+
 @media (max-width: 768px) {
   .brTablet {
     display: block;
   }
 }
+
 @media (max-width: 380px) {
   .brTablet {
     display: none;
@@ -452,6 +339,7 @@ body {
 .brMob {
   display: none;
 }
+
 @media (max-width: 380px) {
   .brMob {
     display: block;
@@ -462,188 +350,61 @@ body {
   font-size: 3.75em;
   font-weight: 600;
   line-height: 75px;
-  letter-spacing: 0em;
   text-align: center;
   margin-top: 20px;
 }
+
 @media (max-width: 380px) {
   .offer h1 {
     font-size: 2em;
     line-height: 40px;
   }
 }
+
 .offer h1 .amazingWord {
   font-style: italic;
   color: rgb(176, 144, 122);
   padding-right: 11px;
 }
+
 .offer .kinds {
   display: flex;
   gap: 19px;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
+  margin: 0 auto;
 }
+
 @media (max-width: 380px) {
   .offer .kinds {
     gap: 12px;
     margin-top: 40px;
   }
 }
+
 .offer .kinds .kind {
-  width: auto;
   display: flex;
   height: 46px;
-  border-radius: 100px;
-  padding-left: 6px;
-  padding-right: 14px;
-  border: solid 1px rgb(193, 182, 173);
+  border-radius: 50%;
+  padding: 0 14px;
+  border: 1px solid rgb(193, 182, 173);
   align-items: center;
   gap: 8px;
 }
+
 @media (max-width: 380px) {
   .offer .kinds .kind {
-    height: 45px;
-  }
-}
-.offer .kinds .kind .wrapperImg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 100px;
-  background-color: rgb(193, 182, 173);
-}
-.offer .kinds .kind .nameKind {
-  font-size: 1em;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: rgb(64, 63, 61);
-}
-.offer .kinds .Kindactive {
-  background-color: rgb(102, 95, 85);
-}
-.offer .kinds .Kindactive .nameKindActive {
-  color: rgb(225, 212, 201);
-}
-
-.catalog {
-  margin-top: 39px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 40px 40px;
-  grid-template-areas: ". . . ." ". . . .";
-}
-@media (max-width: 768px) {
-  .catalog {
-    width: 96%;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-areas: ". ." ". .";
-  }
-}
-@media (max-width: 380px) {
-  .catalog {
-    display: block;
-    width: 90%;
-  }
-}
-.catalog .kindOfCoffee {
-  width: 100%;
-  max-width: 309px;
-  height: 505px;
-  border-radius: 40px;
-  border: solid rgb(193, 182, 173) 1px;
-  position: relative;
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-@media (max-width: 380px) {
-  .catalog .kindOfCoffee {
-    margin-bottom: 41px;
-  }
-}
-.catalog .kindOfCoffee .imgCatalog {
-  width: 100%;
-  max-width: 310px;
-  height: 310px;
-  border-radius: 40px;
-}
-.catalog .kindOfCoffee h5 {
-  margin: 16px 0 0 19.5px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-.catalog .kindOfCoffee .describeCoffee {
-  margin: 11.9px 0 0 19.6px;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-@media (max-width: 380px) {
-  .catalog .kindOfCoffee .describeCoffee {
-    margin: 10.6px 0 0 20.9px;
-  }
-}
-.catalog .kindOfCoffee .price {
-  position: absolute;
-  bottom: 20px;
-  left: 19.9px;
-  margin: 0px;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-@media (max-width: 768px) {
-  .catalog .kindOfCoffeeHide {
-    display: none;
-  }
-}
-.catalog .kindOfCoffee:hover {
-  width: calc(100% + 5px);
-  transition: opacity 0.35s, transform 0.35s;
-  transform: scale(1.04);
-}
-
-.refresh {
-  display: none;
-}
-@media (max-width: 768px) {
-  .refresh {
-    width: 60px;
-    height: 60px;
-    border-radius: 100px;
-    border: solid 1px rgb(102, 95, 85);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 38.7px;
-    margin-bottom: 44px;
-  }
-}
-@media (max-width: 380px) {
-  .refresh {
-    margin-top: -4.3px;
-    margin-bottom: -3px;
+    height: 32px;
+    gap: 6px;
   }
 }
 
-/*# sourceMappingURL=menu.css.map */
+.offer .kinds .kind svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 380px) {
+  .offer .kinds .kind svg {
+    width: 12px;
+    height: 12px;
+  }
+}
