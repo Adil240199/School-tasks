@@ -54,6 +54,7 @@ body {
 .resume__list-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 10px;
   word-break: break-word;
 }
