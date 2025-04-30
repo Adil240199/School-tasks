@@ -2,8 +2,7 @@ header {
   height: 60px;
   display: flex;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
   header {
@@ -54,8 +53,7 @@ header .adaptivMenu {
     z-index: 999;
     flex-direction: column;
     background-color: rgb(225, 212, 201);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 }
 header .navHeader {
@@ -101,8 +99,7 @@ header nav a {
 }
 @media (max-width: 768px) {
   header nav a {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-bottom: 22px;
   }
 }
@@ -452,37 +449,25 @@ header .burgerButtonActive:after {
     overflow: hidden;
   }
 }
-@media (min-width: 381px) {
-  .FavouritesCoffee .rowSliderCoffee .carousel {
-    display: flex;
-    position: relative;
-    white-space: nowrap;
-    transition: all 2s ease;
-    left: 0;
-  }
+.FavouritesCoffee .rowSliderCoffee .carousel {
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+  transition: all 2s ease;
+  left: 0;
 }
 .FavouritesCoffee .rowSliderCoffee .slider {
-  margin-left: 200px;
+  flex: 0 0 100%;
+  margin-left: 0;
   width: 100%;
   max-width: 870px;
-  height: 640px;
-}
-@media (max-width: 380px) {
-  .FavouritesCoffee .rowSliderCoffee .slider {
-    width: 100%;
-    height: auto;
-  }
+  height: auto;
 }
 .FavouritesCoffee .rowSliderCoffee .slider img {
+  width: 100%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (max-width: 380px) {
-  .FavouritesCoffee .rowSliderCoffee .slider img {
-    width: 100%;
-    margin-top: 25px;
-  }
+  margin: 0 auto;
+  margin-top: 25px;
 }
 .FavouritesCoffee .rowSliderCoffee .slider h5 {
   font-size: 24px;
@@ -515,8 +500,7 @@ header .burgerButtonActive:after {
 }
 .FavouritesCoffee .indicator {
   margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 144px;
   display: flex;
   justify-content: space-between;
@@ -556,10 +540,7 @@ header .burgerButtonActive:after {
   background-color: rgb(102, 95, 85);
 }
 
-.About {
-  width: 100%;
-}
-.About .textPlaceResource {
+.textPlaceResource {
   font-size: 3.75em;
   font-weight: 600;
   line-height: 75px;
@@ -569,35 +550,36 @@ header .burgerButtonActive:after {
   word-spacing: -0.1px;
 }
 @media (max-width: 380px) {
-  .About .textPlaceResource {
+  .textPlaceResource {
     font-size: 2em;
     line-height: 40px;
     margin-bottom: 59.5px;
   }
 }
-.About .textPlaceResource .thePerfectWords {
+.textPlaceResource .thePerfectWords {
   font-style: italic;
   color: rgb(176, 144, 122);
 }
-.About .imagesResources {
+
+.imagesResources {
   display: flex;
   position: relative;
   gap: 40px;
   margin-top: -20px;
 }
 @media (max-width: 768px) {
-  .About .imagesResources {
+  .imagesResources {
     display: inline-block;
     margin-top: -17px;
   }
 }
-.About .imagesResources .imgBig {
+.imagesResources .imgBig {
   max-width: 660px;
   height: 590px;
   border-radius: 20px;
 }
 @media (max-width: 768px) {
-  .About .imagesResources .imgBig {
+  .imagesResources .imgBig {
     width: 688px;
     max-width: 104%;
     width: 104%;
@@ -605,52 +587,52 @@ header .burgerButtonActive:after {
   }
 }
 @media (max-width: 380px) {
-  .About .imagesResources .imgBig {
+  .imagesResources .imgBig {
     width: 100%;
   }
 }
-.About .imagesResources .imgSmall {
+.imagesResources .imgSmall {
   max-width: 660px;
   height: 430px;
 }
 @media (max-width: 768px) {
-  .About .imagesResources .imgSmall {
+  .imagesResources .imgSmall {
     display: none;
   }
 }
-.About .imagesResources .aboutOne,
-.About .imagesResources .aboutThree {
+.imagesResources .aboutOne,
+.imagesResources .aboutThree {
   margin-bottom: 37px;
 }
-.About .imagesResources .aboutOne,
-.About .imagesResources .aboutThree,
-.About .imagesResources .aboutTwo,
-.About .imagesResources .aboutFour {
+.imagesResources .aboutOne,
+.imagesResources .aboutThree,
+.imagesResources .aboutTwo,
+.imagesResources .aboutFour {
   border-radius: 20px;
 }
-.About .imagesResources .aboutOne img,
-.About .imagesResources .aboutThree img,
-.About .imagesResources .aboutTwo img,
-.About .imagesResources .aboutFour img {
+.imagesResources .aboutOne img,
+.imagesResources .aboutThree img,
+.imagesResources .aboutTwo img,
+.imagesResources .aboutFour img {
   border-radius: 20px;
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 @media (max-width: 768px) {
-  .About .imagesResources .aboutOne img,
-  .About .imagesResources .aboutThree img,
-  .About .imagesResources .aboutTwo img,
-  .About .imagesResources .aboutFour img {
+  .imagesResources .aboutOne img,
+  .imagesResources .aboutThree img,
+  .imagesResources .aboutTwo img,
+  .imagesResources .aboutFour img {
     margin-top: -4px;
     width: 97.9%;
     height: 102%;
   }
 }
 @media (max-width: 768px) and (max-width: 380px) {
-  .About .imagesResources .aboutOne img,
-  .About .imagesResources .aboutThree img,
-  .About .imagesResources .aboutTwo img,
-  .About .imagesResources .aboutFour img {
+  .imagesResources .aboutOne img,
+  .imagesResources .aboutThree img,
+  .imagesResources .aboutTwo img,
+  .imagesResources .aboutFour img {
     margin-top: -14px;
     margin-left: -151px;
     width: 186.9%;
@@ -658,17 +640,17 @@ header .burgerButtonActive:after {
     transform: none;
   }
 }
+
 @media (min-width: 381px) {
-  .About .aboutOne:hover img,
-  .About .aboutThree:hover img,
-  .About .aboutTwo:hover img,
-  .About .aboutFour:hover img {
+  .aboutOne:hover img,
+  .aboutThree:hover img,
+  .aboutTwo:hover img,
+  .aboutFour:hover img {
     width: calc(100% + 5px);
     transition: opacity 0.35s, transform 0.35s;
     transform: scale(1.04);
   }
 }
-
 .MobileApp {
   min-width: 100%;
   display: flex;
@@ -836,8 +818,7 @@ footer {
   border-radius: 40px;
   gap: 99.5px;
   background-color: rgb(102, 95, 85);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
   footer {
@@ -1020,8 +1001,7 @@ body {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 20px 0px 40px 0px;
   max-width: 1360px;
   width: 100%;
@@ -1076,3 +1056,4 @@ body {
   }
 }
 
+/*# sourceMappingURL=styles.css.map */

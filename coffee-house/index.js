@@ -8,15 +8,10 @@ const navHeader = document.querySelector(".navHeader");
 burgerButtonMain.addEventListener("click", () => {
   const isMenuOpen = adaptivMenu.classList.contains("menuAdaptivActive");
 
-  if (!isMenuOpen) {
-    adaptivMenu.style.transform = "translateX(0%)";
-    burgerButton.classList.add("burgerButtonActive");
-  } else {
-    adaptivMenu.style.transform = "translateX(100%)";
-    burgerButton.classList.remove("burgerButtonActive");
-    burgerButton.classList.add("burgerButton");
-  }
-
+  adaptivMenu.style.transform = isMenuOpen
+    ? "translateX(100%)"
+    : "translateX(0%)";
+  burgerButton.classList.toggle("burgerButtonActive", !isMenuOpen);
   adaptivMenu.classList.toggle("menuAdaptivActive");
   navHeader.classList.toggle("navHeaderActive");
 });
@@ -25,9 +20,8 @@ linkHeaders.forEach((item) => {
   item.addEventListener("click", () => {
     adaptivMenu.style.transform = "translateX(100%)";
     burgerButton.classList.remove("burgerButtonActive");
-    burgerButton.classList.add("burgerButton");
-    adaptivMenu.classList.toggle("menuAdaptivActive");
-    navHeader.classList.toggle("navHeaderActive");
+    adaptivMenu.classList.remove("menuAdaptivActive");
+    navHeader.classList.remove("navHeaderActive");
   });
 });
 
@@ -41,8 +35,17 @@ let lineIndex = 0;
 let isDragging = false;
 let startPosition = 0;
 let currentTranslate = 0;
-
 const slideWidth = 687;
+
+function updateCarousel() {
+  carousel.style.left = `-${position}px`;
+  updateActiveLine(lineIndex);
+}
+
+function updateActiveLine(index) {
+  lines.forEach((line) => line.classList.remove("lineActive"));
+  lines[index].classList.add("lineActive");
+}
 
 function nextSlide() {
   if (position < (lines.length - 1) * slideWidth) {
@@ -66,50 +69,44 @@ function prevSlide() {
   updateCarousel();
 }
 
-function updateCarousel() {
-  carousel.style.left = `-${position}px`;
-  updateActiveLine(lineIndex);
-}
-
-function updateActiveLine(index) {
-  lines.forEach((line) => line.classList.remove("lineActive"));
-  lines[index].classList.add("lineActive");
-}
-
 arrows[1].addEventListener("click", nextSlide);
 arrows[0].addEventListener("click", prevSlide);
 
-// Drag (перетаскивание карусели)
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
-carousel.addEventListener("mouseup", dragEnd);
-carousel.addEventListener("mouseleave", dragEnd);
-carousel.addEventListener("touchend", dragEnd);
-carousel.addEventListener("mousemove", dragMove);
-carousel.addEventListener("touchmove", dragMove);
-
+// Drag
 function dragStart(e) {
-  startPosition = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+  startPosition = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
   isDragging = true;
+
+  document.addEventListener("mousemove", dragMove);
+  document.addEventListener("mouseup", dragEnd);
+  document.addEventListener("touchmove", dragMove);
+  document.addEventListener("touchend", dragEnd);
 }
 
 function dragEnd() {
   isDragging = false;
-  const movedBy = currentTranslate;
 
-  if (movedBy < -100) {
+  if (currentTranslate < -100) {
     nextSlide();
-  } else if (movedBy > 100) {
+  } else if (currentTranslate > 100) {
     prevSlide();
   }
 
   currentTranslate = 0;
   setTransform();
+
+  document.removeEventListener("mousemove", dragMove);
+  document.removeEventListener("mouseup", dragEnd);
+  document.removeEventListener("touchmove", dragMove);
+  document.removeEventListener("touchend", dragEnd);
 }
 
 function dragMove(e) {
   if (!isDragging) return;
-  const currentPosition = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+
+  const currentPosition = e.type.includes("touch")
+    ? e.touches[0].clientX
+    : e.clientX;
   currentTranslate = currentPosition - startPosition;
   setTransform();
 }
@@ -117,3 +114,6 @@ function dragMove(e) {
 function setTransform() {
   carousel.style.left = `-${position - currentTranslate}px`;
 }
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("touchstart", dragStart);
