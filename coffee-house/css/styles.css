@@ -216,7 +216,6 @@ header .burgerButtonActive:after {
 .Enjoy {
   width: 100%;
   max-width: 1360px;
-  height: auto;
   margin-top: 17px;
   border-radius: 40px;
   padding-top: 56px;
@@ -224,6 +223,7 @@ header .burgerButtonActive:after {
   overflow: hidden;
   position: relative;
 }
+
 .Enjoy video {
   position: absolute;
   top: 0;
@@ -232,65 +232,24 @@ header .burgerButtonActive:after {
   height: 100%;
   object-fit: cover;
 }
-@media (max-width: 768px) {
-  .Enjoy {
-    margin-top: 19px;
-    width: 100%;
-    background-size: 100% 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-radius: 40px;
-  }
-}
-@media (max-width: 380px) {
-  .Enjoy {
-    background-size: 300% 100%;
-    padding-bottom: 17.1%;
-    padding-top: 33px;
-  }
-}
-.Enjoy .offerBlock {
+
+.offerBlock {
   z-index: 3;
   width: 90%;
   height: auto;
-  margin-left: 100px;
   margin-left: 7.3%;
   position: relative;
 }
-@media (max-width: 768px) {
-  .Enjoy .offerBlock {
-    width: 90%;
-    margin-left: 8.8%;
-  }
-}
-@media (max-width: 380px) {
-  .Enjoy .offerBlock {
-    margin-left: 4.6%;
-  }
-}
-.Enjoy .offerBlock h1 {
+
+.offerBlock h1 {
   font-size: 4.5em;
   font-weight: 600;
   line-height: 76px;
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 768px) {
-  .Enjoy .offerBlock h1 {
-    line-height: 75.6px;
-  }
-}
-@media (max-width: 380px) {
-  .Enjoy .offerBlock h1 {
-    font-size: 2.62em;
-    line-height: 48.3px;
-  }
-}
-.Enjoy .offerBlock h1 .enjoy-word {
-  font-style: italic;
-  color: rgb(176, 144, 122);
-}
-.Enjoy .offerBlock .underText {
+
+.offerBlock .underText {
   margin-top: -9px;
   font-size: 1em;
   font-weight: 400;
@@ -298,17 +257,13 @@ header .burgerButtonActive:after {
   letter-spacing: 0em;
   text-align: left;
 }
-@media (max-width: 380px) {
-  .Enjoy .offerBlock .underText {
-    margin-top: 39.3px;
-    word-spacing: -0.3px;
-  }
-}
-.Enjoy .offerBlock h1,
-.Enjoy .offerBlock .underText {
+
+.offerBlock h1,
+.offerBlock .underText {
   color: rgb(225, 212, 201);
 }
-.Enjoy .menuButton {
+
+.menuButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,49 +277,74 @@ header .burgerButtonActive:after {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: center;
-  margin-left: 100px;
+  margin-left: 7.3%;
   position: relative;
   margin-top: 40px;
 }
+
+.menuButton a {
+  color: rgb(64, 63, 61);
+}
+
+.menuButton .coffeeIconEnjoy {
+  position: absolute;
+  right: 64px;
+  opacity: 0;
+}
+
+.menuButton:hover .coffeeIconEnjoy {
+  display: block;
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
-  .Enjoy .menuButton {
+  .Enjoy {
+    margin-top: 19px;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .offerBlock {
+    width: 90%;
+    margin-left: 8.8%;
+  }
+  .offerBlock h1 {
+    line-height: 75.6px;
+  }
+  .menuButton {
     margin-left: 8.8%;
     margin-top: 5.5%;
   }
 }
 @media (max-width: 380px) {
-  .Enjoy .menuButton {
+  .Enjoy {
+    background-size: 300% 100%;
+    padding-bottom: 17.1%;
+    padding-top: 33px;
+  }
+  .offerBlock {
+    margin-left: 4.6%;
+  }
+  .offerBlock h1 {
+    font-size: 2.62em;
+    line-height: 48.3px;
+  }
+  .offerBlock .underText {
+    margin-top: 39.3px;
+    word-spacing: -0.3px;
+  }
+  .menuButton {
     margin-left: 4.6%;
     margin-top: 11.5%;
   }
-}
-.Enjoy .menuButton a {
-  color: rgb(64, 63, 61);
-}
-@media (max-width: 380px) {
-  .Enjoy .menuButton a {
-    margin-left: -28px;
-  }
-}
-.Enjoy .menuButton .coffeeIconEnjoy {
-  position: absolute;
-  right: 64px;
-  opacity: 0;
-}
-@media (max-width: 380px) {
-  .Enjoy .menuButton .coffeeIconEnjoy {
+  .menuButton .coffeeIconEnjoy {
     display: block;
     opacity: 1;
   }
+  .menuButton a {
+    margin-left: -28px;
+  }
 }
-.Enjoy .menuButton:hover .coffeeIconEnjoy {
-  display: block;
-  opacity: 1;
-}
-.Enjoy .menuButton:hover a {
-  margin-left: -28px;
-}
-
 .FavouritesCoffee {
   width: 100%;
   position: relative;
@@ -499,8 +479,7 @@ header .burgerButtonActive:after {
   text-align: center;
 }
 .FavouritesCoffee .indicator {
-  margin-top: 40px;
-  margin: 0 auto;
+  margin: 40px auto;
   width: 144px;
   display: flex;
   justify-content: space-between;
@@ -544,10 +523,81 @@ header .burgerButtonActive:after {
   font-size: 3.75em;
   font-weight: 600;
   line-height: 75px;
-  letter-spacing: 0em;
   text-align: left;
   margin-top: 100px;
   word-spacing: -0.1px;
+}
+
+.thePerfectWords {
+  font-style: italic;
+  color: rgb(176, 144, 122);
+}
+
+.imagesResources {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 40px;
+  margin-top: -20px;
+}
+
+.imgBig {
+  max-width: 660px;
+  height: 590px;
+  border-radius: 20px;
+}
+
+.imgSmall {
+  max-width: 660px;
+  height: 430px;
+}
+
+.aboutOne,
+.aboutTwo,
+.aboutThree,
+.aboutFour {
+  border-radius: 20px;
+}
+.aboutOne.aboutOne, .aboutOne.aboutThree,
+.aboutTwo.aboutOne,
+.aboutTwo.aboutThree,
+.aboutThree.aboutOne,
+.aboutThree.aboutThree,
+.aboutFour.aboutOne,
+.aboutFour.aboutThree {
+  margin-bottom: 37px;
+}
+.aboutOne img,
+.aboutTwo img,
+.aboutThree img,
+.aboutFour img {
+  border-radius: 20px;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 381px) {
+  .aboutOne:hover img,
+  .aboutTwo:hover img,
+  .aboutThree:hover img,
+  .aboutFour:hover img {
+    width: calc(100% + 5px);
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale(1.04);
+  }
+}
+@media (max-width: 768px) {
+  .imgBig {
+    width: 100%;
+  }
+  .imgSmall {
+    display: none;
+  }
+  img {
+    margin-top: -4px;
+    width: 97.9%;
+    height: 102%;
+  }
 }
 @media (max-width: 380px) {
   .textPlaceResource {
@@ -555,100 +605,15 @@ header .burgerButtonActive:after {
     line-height: 40px;
     margin-bottom: 59.5px;
   }
-}
-.textPlaceResource .thePerfectWords {
-  font-style: italic;
-  color: rgb(176, 144, 122);
-}
-
-.imagesResources {
-  display: flex;
-  position: relative;
-  gap: 40px;
-  margin-top: -20px;
-}
-@media (max-width: 768px) {
-  .imagesResources {
-    display: inline-block;
-    margin-top: -17px;
-  }
-}
-.imagesResources .imgBig {
-  max-width: 660px;
-  height: 590px;
-  border-radius: 20px;
-}
-@media (max-width: 768px) {
-  .imagesResources .imgBig {
-    width: 688px;
-    max-width: 104%;
-    width: 104%;
-    height: 590px;
-  }
-}
-@media (max-width: 380px) {
-  .imagesResources .imgBig {
+  .imgBig {
     width: 100%;
   }
-}
-.imagesResources .imgSmall {
-  max-width: 660px;
-  height: 430px;
-}
-@media (max-width: 768px) {
-  .imagesResources .imgSmall {
-    display: none;
-  }
-}
-.imagesResources .aboutOne,
-.imagesResources .aboutThree {
-  margin-bottom: 37px;
-}
-.imagesResources .aboutOne,
-.imagesResources .aboutThree,
-.imagesResources .aboutTwo,
-.imagesResources .aboutFour {
-  border-radius: 20px;
-}
-.imagesResources .aboutOne img,
-.imagesResources .aboutThree img,
-.imagesResources .aboutTwo img,
-.imagesResources .aboutFour img {
-  border-radius: 20px;
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-@media (max-width: 768px) {
-  .imagesResources .aboutOne img,
-  .imagesResources .aboutThree img,
-  .imagesResources .aboutTwo img,
-  .imagesResources .aboutFour img {
-    margin-top: -4px;
-    width: 97.9%;
-    height: 102%;
-  }
-}
-@media (max-width: 768px) and (max-width: 380px) {
-  .imagesResources .aboutOne img,
-  .imagesResources .aboutThree img,
-  .imagesResources .aboutTwo img,
-  .imagesResources .aboutFour img {
+  img {
     margin-top: -14px;
     margin-left: -151px;
     width: 186.9%;
     height: 107%;
     transform: none;
-  }
-}
-
-@media (min-width: 381px) {
-  .aboutOne:hover img,
-  .aboutThree:hover img,
-  .aboutTwo:hover img,
-  .aboutFour:hover img {
-    width: calc(100% + 5px);
-    transition: opacity 0.35s, transform 0.35s;
-    transform: scale(1.04);
   }
 }
 .MobileApp {
@@ -811,14 +776,13 @@ header .burgerButtonActive:after {
 }
 
 footer {
-  margin-top: 96px;
+  margin: 96px auto;
   display: flex;
   height: auto;
   padding: 100px;
   border-radius: 40px;
   gap: 99.5px;
   background-color: rgb(102, 95, 85);
-  margin: 0 auto;
 }
 @media (max-width: 768px) {
   footer {

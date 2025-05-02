@@ -1,182 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Inter&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="./assets/coffeeFavicon.svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/coffeeFavicon.svg" />
     <title>Home</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <header>
-            <div class="blocklogo">
-                <img class="ellipseLogo" src="./assets/Ellipse.svg" alt="Logo">
-                <img class="resourceLogo" src="./assets/Resource.svg" alt="Logo">
-                <div class="textLogo">COFFEE HOUSE</div>
-            </div>
-            <div class="adaptivMenu">
-                <nav class="navHeader">
-                    <a class="linkHeader" href="#FavouritesCoffee">Favorite coffee</a>
-                    <a class="linkHeader" href="#About">About</a>
-                    <a class="linkHeader" href="#MobileApp">Mobile app</a>
-                    <a class="linkHeader" href="#">Contact us</a>
-                </nav>
-                <div class="rightLinkHeader">
-                    <a class="linkMenu" href="./menu.html">Menu</a>
-                    <img class="cupCoffee" src="./assets/coffee-cup.svg" alt="coffee-cup">
-                </div>
-            </div>
-            <div class="burgerButton burgerButtonMain"> </div>
-        </header>
-        <div class="Enjoy">
-            <video src="./assets/video.mp4"autoplay muted loop disablePictureInPicture playsinline></video>
-            <div class="offerBlock">
-                <h1><span class="enjoy-word">Enjoy</span> premium <br> coffee at our <br> charming cafe</h1>
-                <p class="underText">With its inviting atmosphere and delicious coffee options, the Coffee <br class="brDesktopTablet"> House Resource is a popular destination for coffee lovers and those <br class="brDesktopTablet"> seeking a warm and inviting space to enjoy their favorite beverage.</p>
-            </div>
-            <div class="menuButton"><a href="./menu.html">Menu</a> <img class="coffeeIconEnjoy" src="./assets/coffee-cup.svg" alt=""></div>
+      <header>
+        <div class="blocklogo">
+          <img class="ellipseLogo" src="./assets/Ellipse.svg" alt="Logo" />
+          <img class="resourceLogo" src="./assets/Resource.svg" alt="Logo" />
+          <div class="textLogo">COFFEE HOUSE</div>
         </div>
-        <div class="FavouritesCoffee" id="FavouritesCoffee">
-            <h2>Choose your <span class="favorite-word">favorite</span> coffee</h2>
-            <div class="rowSliderCoffee">
-              <div class="arrow"><svg class="arrow-svg" width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+        <div class="adaptivMenu">
+          <nav class="navHeader">
+            <a class="linkHeader" href="#FavouritesCoffee">Favorite coffee</a>
+            <a class="linkHeader" href="#About">About</a>
+            <a class="linkHeader" href="#MobileApp">Mobile app</a>
+            <a class="linkHeader" href="#">Contact us</a>
+          </nav>
+          <div class="rightLinkHeader">
+            <a class="linkMenu" href="./menu.html">Menu</a>
+            <img
+              class="cupCoffee"
+              src="./assets/coffee-cup.svg"
+              alt="coffee-cup"
+            />
+          </div>
+        </div>
+        <div class="burgerButton burgerButtonMain"></div>
+      </header>
+      <div class="Enjoy">
+        <video
+          src="./assets/video.mp4"
+          autoplay
+          muted
+          loop
+          disablePictureInPicture
+          playsinline
+        ></video>
+        <div class="offerBlock">
+          <h1>
+            <span class="enjoy-word">Enjoy</span> premium <br />
+            coffee at our <br />
+            charming cafe
+          </h1>
+          <p class="underText">
+            With its inviting atmosphere and delicious coffee options, the
+            Coffee <br class="brDesktopTablet" />
+            House Resource is a popular destination for coffee lovers and those
+            <br class="brDesktopTablet" />
+            seeking a warm and inviting space to enjoy their favorite beverage.
+          </p>
+        </div>
+        <div class="menuButton">
+          <a href="./menu.html">Menu</a>
+          <img class="coffeeIconEnjoy" src="./assets/coffee-cup.svg" alt="" />
+        </div>
+      </div>
+      <div class="FavouritesCoffee" id="FavouritesCoffee">
+        <h2>Choose your <span class="favorite-word">favorite</span> coffee</h2>
+        <div class="rowSliderCoffee">
+          <div class="arrow">
+            <svg
+              class="arrow-svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.5 12H6M6 12L12 6M6 12L12 18"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="sliders">
+            <div class="carousel">
+              <div class="slider">
+                <img src="./assets/coffee-slide.png" alt="Frapuchino" />
+                <h5>S&#39;mores Frappuccino</h5>
+                <p class="describeCoffee">
+                  This new drink takes an espresso and mixes it with brown
+                  <br class="brDesktop" />
+                  sugar and cinnamon before being topped with oat milk.
+                </p>
+                <p class="price">$5.50</p>
               </div>
-                <div class="sliders">
-                    <div class="carousel">
-                        <div class="slider">
-                            <img src="./assets/coffee-slide.png" alt="Frapuchino">
-                            <h5>S&#39;mores Frappuccino</h5>
-                            <p class="describeCoffee">This new drink takes an espresso and mixes it with brown
-                                <br class="brDesktop"> sugar and cinnamon before being topped with oat milk.</p>
-                            <p class="price">$5.50</p>
-                        </div>
-                        <div class="slider">
-                            <img src="./assets/coffee-slider-2.png" alt="Frapuchino">
-                            <h5>Caramel Macchiato</h5>
-                            <p class="describeCoffee">Fragrant and unique classic espresso with rich caramel-peanut <br class="desktop"> syrup, with cream under whipped thick foam.</p>
-                            <p class="price">$5.00</p>
-                        </div>
-                        <div class="slider">
-                            <img src="./assets/coffee-slider-3.png" alt="Frapuchino">
-                            <h5>Ice coffee</h5>
-                            <p class="describeCoffee">A popular summer drink that tones and invigorates. Prepared <br class="desktop"> from coffee, milk and ice.</p>
-                            <p class="price">$4.50</p>
-                        </div>
-                    </div>
-                </div>
-             <div class="arrow"><svg class="arrow-svg" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg></div>  
+              <div class="slider">
+                <img src="./assets/coffee-slider-2.png" alt="Frapuchino" />
+                <h5>Caramel Macchiato</h5>
+                <p class="describeCoffee">
+                  Fragrant and unique classic espresso with rich caramel-peanut
+                  <br class="desktop" />
+                  syrup, with cream under whipped thick foam.
+                </p>
+                <p class="price">$5.00</p>
+              </div>
+              <div class="slider">
+                <img src="./assets/coffee-slider-3.png" alt="Frapuchino" />
+                <h5>Ice coffee</h5>
+                <p class="describeCoffee">
+                  A popular summer drink that tones and invigorates. Prepared
+                  <br class="desktop" />
+                  from coffee, milk and ice.
+                </p>
+                <p class="price">$4.50</p>
+              </div>
             </div>
-            <div class="indicator">
-                <span class="line lineActive"></span><span class="line"></span><span class="line"></span>
-            </div>
+          </div>
+          <div class="arrow">
+            <svg
+              class="arrow-svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
         </div>
-        <div class="About" id="About">
-            <p class="textPlaceResource">Resource is <span class="thePerfectWords">the perfect <br class="brTablet">and cozy place </span>where
-                <br class="brDesktop">you can enjoy a variety<br class="brTablet"> of hot beverages, relax,<br>catch up with friends,<br class="brTablet"> or get some work done.</p>
-                <div class="imagesResources">
-                    <div class="blockOneImg">
-                      <div class="aboutOne imgBig">
-                        <img src="./assets/about-1.jpg" alt="girl">
-                      </div>
-                      <div class="aboutTwo imgSmall">
-                        <img src="./assets/about-2.jpg" alt="cup">
-                      </div>
-                    </div>
-                    <div class="blockTwoImg">
-                      <div class="aboutThree imgSmall">
-                        <img src="./assets/about-3.jpg" alt="men">
-                      </div>
-                      <div class="aboutFour imgBig">
-                        <img src="./assets/about-4.jpg" alt="people">
-                      </div>
-                    </div>
-                  </div>
+        <div class="indicator">
+          <span class="line lineActive"></span><span class="line"></span
+          ><span class="line"></span>
         </div>
-        <div class="MobileApp" id="MobileApp">
-            <div class="blockDownload">
-                <h3><span class="downloadWord">Download</span> our apps <br class="brDesktop"> to <br class="brTablet"> start ordering</h3>
-                <p class="aboutApp">Download the Resource app today and experience the comfort of ordering your <br class="brDesktop">
-                    favorite <br class="brTablet"> coffee from wherever you are</p>
-                <div class="blockLinksApp">
-                    <a class="linkApp" href="#">
-                        <svg class="iconApple" width="28" height="33" viewBox="0 0 28 33" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.7073 17.6307C22.6704 13.6324 26.065 11.6872 26.2203 11.5966C24.2977 8.86366 21.3178 8.49026 20.2707 8.46048C17.7679 8.20369 15.3403 9.92062 14.0654 9.92062C12.765 9.92062 10.8017 8.48529 8.68579 8.52747C5.96293 8.56841 3.41566 10.1055 2.0186 12.4923C-0.864579 17.359 1.28572 24.5108 4.04802 28.4446C5.42981 30.3712 7.04444 32.5223 9.15784 32.4466C11.2254 32.3635 11.9978 31.1614 14.4929 31.1614C16.9651 31.1614 17.6903 32.4466 19.8457 32.3983C22.0647 32.3635 23.4618 30.463 24.7952 28.519C26.392 26.3108 27.0333 24.1362 27.0588 24.0245C27.0066 24.0071 22.7493 22.4229 22.7073 17.6307Z" />
-                            <path d="M18.6357 5.87268C19.7477 4.51675 20.5086 2.67205 20.2974 0.800049C18.6879 0.86952 16.675 1.88554 15.5159 3.21169C14.4903 4.38029 13.5742 6.29571 13.8109 8.097C15.6189 8.2285 17.4753 7.20752 18.6357 5.87268Z" />
-                            </svg>
-                        <p class="linkText">
-                            <span class="available">Available on the</span>
-                            <span class="store">App Store</span>
-                        </p>
-                    </a>
-                    <a class="linkApp" href="#">
-                        <svg class="iconPlayMarket" width="31" height="34" viewBox="0 0 31 34"  xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.755796 2.20297C0.393349 2.57289 0.183594 3.14884 0.183594 3.89471V30.4994C0.183594 31.2453 0.393349 31.8212 0.755796 32.1911L0.845252 32.2723L16.1359 17.37V17.0181L0.845252 2.11575L0.755796 2.20297Z" />
-                            <path d="M23.0776 22.34L17.9863 17.37V17.0181L23.0837 12.0482L23.1979 12.1128L29.2345 15.4617C30.9573 16.4121 30.9573 17.976 29.2345 18.9324L23.1979 22.2753L23.0776 22.34Z" />
-                            <path d="M22.2733 23.2007L17.0617 18.1195L1.68164 33.1166C2.25384 33.7031 3.18695 33.7737 4.24807 33.1873L22.2733 23.2007Z"/>
-                            <path d="M22.2733 11.1876L4.24807 1.20103C3.18695 0.620579 2.25384 0.691254 1.68164 1.27772L17.0617 16.2688L22.2733 11.1876Z"/>
-                            </svg>
-                        <p class="linkText linkTextAndroid">
-                            <span class="available">Available on</span>
-                            <span class="store">Google Play</span>
-                        </p>
-                    </a>
-                </div>
+      </div>
+      <div class="About" id="About">
+        <p class="textPlaceResource">
+          Resource is
+          <span class="thePerfectWords"
+            >the perfect <br class="brTablet" />and cozy place </span
+          >where <br class="brDesktop" />you can enjoy a variety<br
+            class="brTablet"
+          />
+          of hot beverages, relax,<br />catch up with friends,<br
+            class="brTablet"
+          />
+          or get some work done.
+        </p>
+        <div class="imagesResources">
+          <div class="blockOneImg">
+            <div class="aboutOne imgBig">
+              <img src="./assets/about-1.jpg" alt="girl" />
             </div>
-            <div class="blockImgMobiles">
-                <img src="./assets/mobileScreens.png" alt="mobilesCoffee" class="imgMobiles">
+            <div class="aboutTwo imgSmall">
+              <img src="./assets/about-2.jpg" alt="cup" />
             </div>
+          </div>
+          <div class="blockTwoImg">
+            <div class="aboutThree imgSmall">
+              <img src="./assets/about-3.jpg" alt="men" />
+            </div>
+            <div class="aboutFour imgBig">
+              <img src="./assets/about-4.jpg" alt="people" />
+            </div>
+          </div>
         </div>
-        <footer id="footer">
-            <div class="blockleft">
-                <h4>Sip, Savor, Smile.<br class="brDesktop"> <span class="coffeeTimeWord">It&#39;s <br class="brMob"> coffee time!</span></h4>
-                <div class="blockIconsSocial">
-                    <div class="wrappericon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path  class="iconSocMedia" d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"  stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></div>
-                    <div class="wrappericon">
-                            <svg  class="iconSocMedia" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path  class="iconSocMedia" d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#E1D4C9"  stroke-linecap="round" stroke-linejoin="round"/>
-                                <path  class="iconSocMedia" d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="#E1D4C9" />
-                                <path  class="iconSocMedia" d="M17.5 6.51L17.51 6.49889"   stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg></div>
-                    <div class="wrappericon"><svg class="iconSocMedia" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path  class="iconSocMedia" d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="#E1D4C9"  stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        </div>
-                </div>
+      </div>
+      <div class="MobileApp" id="MobileApp">
+        <div class="blockDownload">
+          <h3>
+            <span class="downloadWord">Download</span> our apps
+            <br class="brDesktop" />
+            to <br class="brTablet" />
+            start ordering
+          </h3>
+          <p class="aboutApp">
+            Download the Resource app today and experience the comfort of
+            ordering your <br class="brDesktop" />
+            favorite <br class="brTablet" />
+            coffee from wherever you are
+          </p>
+          <div class="blockLinksApp">
+            <a class="linkApp" href="#">
+              <svg
+                class="iconApple"
+                width="28"
+                height="33"
+                viewBox="0 0 28 33"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.7073 17.6307C22.6704 13.6324 26.065 11.6872 26.2203 11.5966C24.2977 8.86366 21.3178 8.49026 20.2707 8.46048C17.7679 8.20369 15.3403 9.92062 14.0654 9.92062C12.765 9.92062 10.8017 8.48529 8.68579 8.52747C5.96293 8.56841 3.41566 10.1055 2.0186 12.4923C-0.864579 17.359 1.28572 24.5108 4.04802 28.4446C5.42981 30.3712 7.04444 32.5223 9.15784 32.4466C11.2254 32.3635 11.9978 31.1614 14.4929 31.1614C16.9651 31.1614 17.6903 32.4466 19.8457 32.3983C22.0647 32.3635 23.4618 30.463 24.7952 28.519C26.392 26.3108 27.0333 24.1362 27.0588 24.0245C27.0066 24.0071 22.7493 22.4229 22.7073 17.6307Z"
+                />
+                <path
+                  d="M18.6357 5.87268C19.7477 4.51675 20.5086 2.67205 20.2974 0.800049C18.6879 0.86952 16.675 1.88554 15.5159 3.21169C14.4903 4.38029 13.5742 6.29571 13.8109 8.097C15.6189 8.2285 17.4753 7.20752 18.6357 5.87268Z"
+                />
+              </svg>
+              <p class="linkText">
+                <span class="available">Available on the</span>
+                <span class="store">App Store</span>
+              </p>
+            </a>
+            <a class="linkApp" href="#">
+              <svg
+                class="iconPlayMarket"
+                width="31"
+                height="34"
+                viewBox="0 0 31 34"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.755796 2.20297C0.393349 2.57289 0.183594 3.14884 0.183594 3.89471V30.4994C0.183594 31.2453 0.393349 31.8212 0.755796 32.1911L0.845252 32.2723L16.1359 17.37V17.0181L0.845252 2.11575L0.755796 2.20297Z"
+                />
+                <path
+                  d="M23.0776 22.34L17.9863 17.37V17.0181L23.0837 12.0482L23.1979 12.1128L29.2345 15.4617C30.9573 16.4121 30.9573 17.976 29.2345 18.9324L23.1979 22.2753L23.0776 22.34Z"
+                />
+                <path
+                  d="M22.2733 23.2007L17.0617 18.1195L1.68164 33.1166C2.25384 33.7031 3.18695 33.7737 4.24807 33.1873L22.2733 23.2007Z"
+                />
+                <path
+                  d="M22.2733 11.1876L4.24807 1.20103C3.18695 0.620579 2.25384 0.691254 1.68164 1.27772L17.0617 16.2688L22.2733 11.1876Z"
+                />
+              </svg>
+              <p class="linkText linkTextAndroid">
+                <span class="available">Available on</span>
+                <span class="store">Google Play</span>
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="blockImgMobiles">
+          <img
+            src="./assets/mobileScreens.png"
+            alt="mobilesCoffee"
+            class="imgMobiles"
+          />
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="blockleft">
+          <h4>
+            Sip, Savor, Smile.<br class="brDesktop" />
+            <span class="coffeeTimeWord"
+              >It&#39;s <br class="brMob" />
+              coffee time!</span
+            >
+          </h4>
+          <div class="blockIconsSocial">
+            <div class="wrappericon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="iconSocMedia"
+                  d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"
+                  stroke="#E1D4C9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
-            <div class="blockRight">
-                <a class="h5" href="#footer">Contact us</a>
-                <div class="informAndContact">
-                    <a href="https://www.google.com/maps/place/Your+Custom+Location" target="_blank">
-                        <img src="./assets/location.svg" alt="" class="iconContact">
-                    <span class="textContact">8558 Green Rd.,&nbsp;&nbsp;LA</span>
-                    </a>
-                   
-                </div>
-                <div class="informAndContact informAndContactFirst">
-                    <a href="tel:+123456789">
-                    <img src="./assets/phone.svg" alt="" class="iconContact">
-                    <span class="textContact">+1 (603) 555-0123</span>
-                    </a>
-                </div>
-                <div class="informAndContact informAndContactLast">
-                    <img src="./assets/clock.svg" alt="" class="iconContact">
-                    <span class="schedule textContact">Mon-Sat: 9:00 AM &ndash; 23:00 PM</span>
-                </div>
+            <div class="wrappericon">
+              <svg
+                class="iconSocMedia"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="iconSocMedia"
+                  d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                  stroke="#E1D4C9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  class="iconSocMedia"
+                  d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z"
+                  stroke="#E1D4C9"
+                />
+                <path
+                  class="iconSocMedia"
+                  d="M17.5 6.51L17.51 6.49889"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
-        </footer>
+            <div class="wrappericon">
+              <svg
+                class="iconSocMedia"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="iconSocMedia"
+                  d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z"
+                  stroke="#E1D4C9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="blockRight">
+          <a class="h5" href="#footer">Contact us</a>
+          <div class="informAndContact">
+            <a
+              href="https://www.google.com/maps/place/Your+Custom+Location"
+              target="_blank"
+            >
+              <img src="./assets/location.svg" alt="" class="iconContact" />
+              <span class="textContact">8558 Green Rd.,&nbsp;&nbsp;LA</span>
+            </a>
+          </div>
+          <div class="informAndContact informAndContactFirst">
+            <a href="tel:+123456789">
+              <img src="./assets/phone.svg" alt="" class="iconContact" />
+              <span class="textContact">+1 (603) 555-0123</span>
+            </a>
+          </div>
+          <div class="informAndContact informAndContactLast">
+            <img src="./assets/clock.svg" alt="" class="iconContact" />
+            <span class="schedule textContact"
+              >Mon-Sat: 9:00 AM &ndash; 23:00 PM</span
+            >
+          </div>
+        </div>
+      </footer>
     </div>
     <script type="module" src="./index.js"></script>
-</body>
+  </body>
 </html>
-
-

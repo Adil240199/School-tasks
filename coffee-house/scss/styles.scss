@@ -1,11 +1,11 @@
 
-@import "../mixin";
-@import "./header";
-@import "./enjoy";
-@import "./favouritesCoffee";
-@import "./about";
-@import "./mobileApp";
-@import "./footer";
+@use "./mixin" as*;
+@use "./header";
+@use "./enjoy";
+@use "./favouritesCoffee";
+@use "./about";
+@use "./mobileApp";
+@use "./footer";
 html {
   overflow-x: hidden;
   font-size: 16px;

@@ -1,131 +1,142 @@
 .Enjoy {
   width: 100%;
   max-width: 1360px;
-  height: auto;
   margin-top: 17px;
   border-radius: 40px;
   padding-top: 56px;
   padding-bottom: 100px;
   overflow: hidden;
   position: relative;
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  @media (max-width: 768px) {
+}
+
+.Enjoy video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offerBlock {
+  z-index: 3;
+  width: 90%;
+  height: auto;
+  margin-left: 7.3%;
+  position: relative;
+}
+
+.offerBlock h1 {
+  font-size: 4.5em;
+  font-weight: 600;
+  line-height: 76px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.offerBlock .underText {
+  margin-top: -9px;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.offerBlock h1,
+.offerBlock .underText {
+  color: rgba(225, 212, 201, 1);
+}
+
+.menuButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 200px;
+  height: 64px;
+  border-radius: 100px;
+  background-color: rgba(225, 212, 201, 1);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-left: 7.3%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.menuButton a {
+  color: rgba(64, 63, 61, 1);
+}
+
+.menuButton .coffeeIconEnjoy {
+  position: absolute;
+  right: 64px;
+  opacity: 0;
+}
+
+.menuButton:hover .coffeeIconEnjoy {
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .Enjoy {
     margin-top: 19px;
-    width: 100%;
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
-    border-radius: 40px;
   }
-  @media (max-width: 380px) {
+
+  .offerBlock {
+    width: 90%;
+    margin-left: 8.8%;
+  }
+
+  .offerBlock h1 {
+    line-height: 75.6px;
+  }
+
+  .menuButton {
+    margin-left: 8.8%;
+    margin-top: 5.5%;
+  }
+}
+
+@media (max-width: 380px) {
+  .Enjoy {
     background-size: 300% 100%;
     padding-bottom: 17.1%;
     padding-top: 33px;
   }
+
   .offerBlock {
-    z-index: 3;
-    width: 90%;
-    height: auto;
-    margin-left: 100px;
-    margin-left: 7.3%;
-    position: relative;
-    @media (max-width: 768px) {
-      width: 90%;
-      margin-left: 8.8%;
-    }
-    @media (max-width: 380px) {
-      margin-left: 4.6%;
-    }
-    h1 {
-      font-size: 4.5em;
-      font-weight: 600;
-      line-height: 76px;
-      letter-spacing: 0em;
-      text-align: left;
-      @media (max-width: 768px) {
-        line-height: 75.6px;
-      }
-      @media (max-width: 380px) {
-        font-size: 2.62em;
-        line-height: 48.3px;
-      }
-      .enjoy-word {
-        font-style: italic;
-        color: rgba(176, 144, 122, 1);
-      }
-    }
-    .underText {
-      margin-top: -9px;
-      font-size: 1em;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: left;
-      @media (max-width: 380px) {
-        margin-top: 39.3px;
-        word-spacing: -0.3px;
-      }
-    }
-    h1,
-    .underText {
-      color: rgba(225, 212, 201, 1);
-    }
+    margin-left: 4.6%;
   }
+
+  .offerBlock h1 {
+    font-size: 2.62em;
+    line-height: 48.3px;
+  }
+
+  .offerBlock .underText {
+    margin-top: 39.3px;
+    word-spacing: -0.3px;
+  }
+
   .menuButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    width: 200px;
-    height: 64px;
-    border-radius: 100px;
-    background-color: rgba(225, 212, 201, 1);
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-left: 100px;
-    position: relative;
-    margin-top: 40px;
-    @media (max-width: 768px) {
-      margin-left: 8.8%;
-      margin-top: 5.5%;
-    }
-    @media (max-width: 380px) {
-      margin-left: 4.6%;
-      margin-top: 11.5%;
-    }
-    a {
-      color: rgba(64, 63, 61, 1);
-      @media (max-width: 380px) {
-        margin-left: -28px;
-      }
-    }
-    .coffeeIconEnjoy {
-      position: absolute;
-      right: 64px;
-      opacity: 0;
-      @media (max-width: 380px) {
-        display: block;
-        opacity: 1;
-      }
-    }
+    margin-left: 4.6%;
+    margin-top: 11.5%;
   }
-  .menuButton:hover {
-    .coffeeIconEnjoy {
-      display: block;
-      opacity: 1;
-    }
-    a {
-      margin-left: -28px;
-    }
+
+  .menuButton .coffeeIconEnjoy {
+    display: block;
+    opacity: 1;
+  }
+
+  .menuButton a {
+    margin-left: -28px;
   }
 }

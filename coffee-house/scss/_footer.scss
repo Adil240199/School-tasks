@@ -1,12 +1,11 @@
 footer {
-  margin-top: 96px;
+  margin: 96px auto;
   display: flex;
   height: auto;
   padding: 100px;
   border-radius: 40px;
   gap: 99.5px;
   background-color: rgba(102, 95, 85, 1);
-  @include center;
   @media (max-width: 768px) {
     display: block;
     max-width: 82.5%;

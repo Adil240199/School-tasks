@@ -1,10 +1,12 @@
-@import "../mixin";
+@use "./mixin" as *;
 @import "./footer";
 @import "./header";
+
 html {
   overflow-x: hidden;
   font-size: 16px;
 }
+
 * {
   font-family: "Inter";
   text-decoration: none;
@@ -22,27 +24,28 @@ body {
   background-color: rgba(225, 212, 201, 1);
   overflow-x: hidden;
 }
+
 .container {
   @include center;
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0 40px;
   max-width: 1360px;
   width: 100%;
   height: auto;
   position: relative;
   @media (max-width: 768px) {
-    width: 100%;
     max-width: 688px;
   }
   @media (max-width: 380px) {
-    width: 100%;
     max-width: 348px;
   }
 }
+
 .brDesktop {
   @media (max-width: 768px) {
     display: none;
   }
 }
+
 .brTablet {
   display: none;
   @media (max-width: 768px) {
@@ -52,6 +55,7 @@ body {
     display: none;
   }
 }
+
 .brMob {
   display: none;
   @media (max-width: 380px) {
@@ -64,7 +68,6 @@ body {
     font-size: 3.75em;
     font-weight: 600;
     line-height: 75px;
-    letter-spacing: 0em;
     text-align: center;
     margin-top: 20px;
     @media (max-width: 380px) {
@@ -77,6 +80,7 @@ body {
       padding-right: 11px;
     }
   }
+
   .kinds {
     display: flex;
     gap: 19px;
@@ -86,148 +90,140 @@ body {
       gap: 12px;
       margin-top: 40px;
     }
+
     .kind {
       width: auto;
       display: flex;
       height: 46px;
       border-radius: 100px;
-      padding-left: 6px;
-      padding-right: 14px;
+      padding: 0 14px 0 6px;
       border: solid 1px rgba(193, 182, 173, 1);
       align-items: center;
       gap: 8px;
       @media (max-width: 380px) {
         height: 45px;
       }
+
       .wrapperImg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 30px;
         height: 30px;
         border-radius: 100px;
         background-color: rgba(193, 182, 173, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .nameKind {
         font-size: 1em;
         font-weight: 600;
         line-height: 24px;
-        letter-spacing: 0em;
         text-align: left;
         color: rgba(64, 63, 61, 1);
       }
     }
+
     .Kindactive {
       background-color: rgba(102, 95, 85, 1);
+
       .nameKindActive {
         color: rgba(225, 212, 201, 1);
       }
     }
   }
 }
+
 .catalog {
   margin-top: 39px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 40px 40px;
-  grid-template-areas:
-    ". . . ."
-    ". . . .";
+  gap: 40px;
   @media (max-width: 768px) {
-    width: 96%;
-    @include center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 40px;
     grid-row-gap: 40px;
-    grid-template-areas:
-      ". ."
-      ". .";
   }
   @media (max-width: 380px) {
     display: block;
     width: 90%;
   }
+
   .kindOfCoffee {
     width: 100%;
     max-width: 309px;
     height: 505px;
     border-radius: 40px;
-    border: solid rgba(193, 182, 173, 1) 1px;
+    border: 1px solid rgba(193, 182, 173, 1);
     position: relative;
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    @media (max-width: 380px) {
-      margin-bottom: 41px;
-    }
+    margin-bottom: 41px;
+
     .imgCatalog {
       width: 100%;
       max-width: 310px;
       height: 310px;
       border-radius: 40px;
     }
+
     h5 {
       margin: 16px 0 0 19.5px;
       font-size: 1.5rem;
       font-weight: 600;
       line-height: 30px;
-      letter-spacing: 0em;
+      letter-spacing: 0;
       text-align: left;
     }
+
     .describeCoffee {
       margin: 11.9px 0 0 19.6px;
       font-size: 1rem;
       font-weight: 400;
       line-height: 24px;
-      letter-spacing: 0em;
       text-align: left;
       @media (max-width: 380px) {
         margin: 10.6px 0 0 20.9px;
       }
     }
+
     .price {
       position: absolute;
       bottom: 20px;
       left: 19.9px;
-      margin: 0px;
+      margin: 0;
       font-size: 24px;
       font-weight: 600;
       line-height: 30px;
-      letter-spacing: 0em;
-      text-align: left;
+    }
+
+    &:hover {
+      width: calc(100% + 5px);
+      transition: opacity 0.35s, transform 0.35s;
+      transform: scale(1.04);
     }
   }
+
   @media (max-width: 768px) {
     .kindOfCoffeeHide {
       display: none;
     }
   }
-
-  .kindOfCoffee:hover {
-    width: calc(100% + 5px);
-    transition: opacity 0.35s, transform 0.35s;
-    transform: scale(1.04);
-  }
 }
+
 .refresh {
   display: none;
   @media (max-width: 768px) {
     width: 60px;
     height: 60px;
     border-radius: 100px;
-    border: solid 1px rgba(102, 95, 85, 1);
-    display: block;
-    @include center;
+    border: 1px solid rgba(102, 95, 85, 1);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 38.7px;
-    margin-bottom: 44px;
+    margin: 38.7px 0 44px;
   }
   @media (max-width: 380px) {
-    margin-top: -4.3px;
-    margin-bottom: -3px;
+    margin: -4.3px 0 -3px;
   }
 }

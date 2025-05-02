@@ -121,8 +121,7 @@
     }
   }
   .indicator {
-    margin-top: 40px;
-    @include center;
+    margin: 40px auto;
     width: 144px;
     display: flex;
     justify-content: space-between;
