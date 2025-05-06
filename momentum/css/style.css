@@ -503,8 +503,6 @@ h5{
     width: 90%;
     padding: 10px;
     font-size: 16px;
-    background: hsla(205, 100%, 69%, 0.9);
-    z-index: 99;
   }
   .setting {
     position: fixed;
@@ -513,7 +511,6 @@ h5{
     width: 90%;
     font-size: 18px;
     padding: 15px;
-    z-index: 100;
   }
   .time {
     min-height: 80px;
