@@ -18,21 +18,15 @@
 
 ---
 
-### 🔹 [Coffee House Landing Page](https://adil240199.github.io/portfolio-links/coffee-house/home.html)
-- **Tech Stack**: HTML, SCSS, JS 
-- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/coffee-house)
-
----
-
 ### 🔹 [Momentum App](https://adil240199.github.io/portfolio-links/momentum/)
 - **Tech Stack**: JavaScript, CSS 
 - **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/momentum)
 
 ---
 
-### 🔹 [Hangman Game](https://adil240199.github.io/portfolio-links/hangman/)
-- **Tech Stack**: JavaScript, CSS  
-- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/hangman)
+### 🔹 [Coffee House Landing Page](https://adil240199.github.io/portfolio-links/coffee-house/home.html)
+- **Tech Stack**: HTML, SCSS, JS 
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/coffee-house)
 
 ---
 
