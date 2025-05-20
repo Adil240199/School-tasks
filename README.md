@@ -12,15 +12,15 @@
 
 ---
 
-### 🔹 [CV Page](https://adil240199.github.io/portfolio-links/cv-html/)
-- **Tech Stack**: HTML, CSS  
-- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/cv-html)
-
----
-
 ### 🔹 [Momentum App](https://adil240199.github.io/portfolio-links/momentum/)
 - **Tech Stack**: JavaScript, CSS 
 - **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/momentum)
+
+---
+
+### 🔹 [Demo School Project](https://adil240199.github.io/Works/)
+- **Tech Stack**: React, Redux, SCSS, CSS Modules, Hooks
+- **GitHub**: [View Code](https://github.com/Adil240199/Works)
 
 ---
 
@@ -30,15 +30,15 @@
 
 ---
 
-### 🔹 [Nonograms Puzzle Game](https://adil240199.github.io/portfolio-links/nonograms/)
-- **Tech Stack**: JavaScript, CSS  
-- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/nonograms)
+### 🔹 [CV Page](https://adil240199.github.io/portfolio-links/cv-html/)
+- **Tech Stack**: HTML, CSS  
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/cv-html)
 
 ---
 
-### 🔹 [Demo School Project](https://adil240199.github.io/Works/)
-- **Tech Stack**: React, Redux, SCSS, CSS Modules, Hooks
-- **GitHub**: [View Code](https://github.com/Adil240199/Works)
+### 🔹 [Nonograms Puzzle Game](https://adil240199.github.io/portfolio-links/nonograms/)
+- **Tech Stack**: JavaScript, CSS  
+- **GitHub**: [View Code](https://github.com/Adil240199/portfolio-links/tree/gh-pages/nonograms)
 
 ---
 
