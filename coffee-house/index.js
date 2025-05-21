@@ -1,119 +1,118 @@
-// Навигационное меню
 const burgerButtonMain = document.querySelector(".burgerButtonMain");
-const burgerButton = document.querySelector(".burgerButton");
 const adaptivMenu = document.querySelector(".adaptivMenu");
-const linkHeaders = document.querySelectorAll(".linkHeader");
 const navHeader = document.querySelector(".navHeader");
+const linkHeaders = document.querySelectorAll(".linkHeader");
 
 burgerButtonMain.addEventListener("click", () => {
-  const isMenuOpen = adaptivMenu.classList.contains("menuAdaptivActive");
-
-  adaptivMenu.style.transform = isMenuOpen
-    ? "translateX(100%)"
-    : "translateX(0%)";
-  burgerButton.classList.toggle("burgerButtonActive", !isMenuOpen);
   adaptivMenu.classList.toggle("menuAdaptivActive");
+  burgerButtonMain.classList.toggle("burgerButtonActive");
   navHeader.classList.toggle("navHeaderActive");
 });
 
 linkHeaders.forEach((item) => {
   item.addEventListener("click", () => {
-    adaptivMenu.style.transform = "translateX(100%)";
-    burgerButton.classList.remove("burgerButtonActive");
-    adaptivMenu.classList.remove("menuAdaptivActive");
-    navHeader.classList.remove("navHeaderActive");
+    if (window.innerWidth <= 768) {
+      adaptivMenu.classList.remove("menuAdaptivActive");
+      burgerButtonMain.classList.remove("burgerButtonActive");
+      navHeader.classList.remove("navHeaderActive");
+    }
   });
 });
 
-// Карусель
-const arrows = document.querySelectorAll(".arrow");
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    adaptivMenu.classList.remove("menuAdaptivActive");
+    burgerButtonMain.classList.remove("burgerButtonActive");
+    navHeader.classList.remove("navHeaderActive");
+  }
+});
+
+// ====== Элементы ======
+const container = document.querySelector(".sliders");
 const carousel = document.querySelector(".carousel");
-const lines = document.querySelectorAll(".line");
+const slides = Array.from(document.querySelectorAll(".slider"));
+const [btnPrev, btnNext] = document.querySelectorAll(".arrow");
+const indicators = document.querySelectorAll(".line");
 
-let position = 0;
-let lineIndex = 0;
+let currentIndex = 0;
+let startX = 0;
+let deltaX = 0;
 let isDragging = false;
-let startPosition = 0;
-let currentTranslate = 0;
-const slideWidth = 687;
+let isMoving = false;
 
-function updateCarousel() {
-  carousel.style.left = `-${position}px`;
-  updateActiveLine(lineIndex);
+// ====== Инициализация ======
+function initCarousel() {
+  carousel.style.transition = "transform 0.4s ease";
+  goToSlide(0);
+  window.addEventListener("resize", () => goToSlide(currentIndex));
+
+  container.addEventListener("pointerdown", dragStart);
+  container.addEventListener("pointermove", dragMove);
+  container.addEventListener("pointerup", dragEnd);
+  container.addEventListener("pointercancel", dragEnd);
+}
+initCarousel();
+
+// ====== Переход к слайду ======
+function goToSlide(idx) {
+  if (isMoving) return;
+  isMoving = true;
+  const w = container.clientWidth;
+  const count = slides.length;
+  currentIndex = ((idx % count) + count) % count;
+  carousel.style.transform = `translateX(-${w * currentIndex}px)`;
+  updateIndicators();
+  carousel.addEventListener(
+    "transitionend",
+    () => {
+      isMoving = false;
+    },
+    { once: true }
+  );
 }
 
-function updateActiveLine(index) {
-  lines.forEach((line) => line.classList.remove("lineActive"));
-  lines[index].classList.add("lineActive");
+// ====== Индикаторы ======
+function updateIndicators() {
+  indicators.forEach((line, i) =>
+    line.classList.toggle("lineActive", i === currentIndex)
+  );
 }
 
-function nextSlide() {
-  if (position < (lines.length - 1) * slideWidth) {
-    position += slideWidth;
-    lineIndex++;
-  } else {
-    position = 0;
-    lineIndex = 0;
-  }
-  updateCarousel();
-}
+// ====== Кнопки ======
+btnNext.addEventListener("click", () => {
+  if (!isDragging) goToSlide(currentIndex + 1);
+});
+btnPrev.addEventListener("click", () => {
+  if (!isDragging) goToSlide(currentIndex - 1);
+});
 
-function prevSlide() {
-  if (position > 0) {
-    position -= slideWidth;
-    lineIndex--;
-  } else {
-    position = (lines.length - 1) * slideWidth;
-    lineIndex = lines.length - 1;
-  }
-  updateCarousel();
-}
-
-arrows[1].addEventListener("click", nextSlide);
-arrows[0].addEventListener("click", prevSlide);
-
-// Drag
+// ====== Drag’n’Drop через Pointer Events ======
 function dragStart(e) {
-  startPosition = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+  if (isMoving) return;
+  e.preventDefault(); // 👉 блокируем системные действия
   isDragging = true;
-
-  document.addEventListener("mousemove", dragMove);
-  document.addEventListener("mouseup", dragEnd);
-  document.addEventListener("touchmove", dragMove);
-  document.addEventListener("touchend", dragEnd);
-}
-
-function dragEnd() {
-  isDragging = false;
-
-  if (currentTranslate < -100) {
-    nextSlide();
-  } else if (currentTranslate > 100) {
-    prevSlide();
-  }
-
-  currentTranslate = 0;
-  setTransform();
-
-  document.removeEventListener("mousemove", dragMove);
-  document.removeEventListener("mouseup", dragEnd);
-  document.removeEventListener("touchmove", dragMove);
-  document.removeEventListener("touchend", dragEnd);
+  startX = e.clientX;
+  deltaX = 0;
+  carousel.style.transition = "none";
+  container.setPointerCapture(e.pointerId);
 }
 
 function dragMove(e) {
   if (!isDragging) return;
-
-  const currentPosition = e.type.includes("touch")
-    ? e.touches[0].clientX
-    : e.clientX;
-  currentTranslate = currentPosition - startPosition;
-  setTransform();
+  deltaX = e.clientX - startX;
+  const w = container.clientWidth;
+  carousel.style.transform = `translateX(-${w * currentIndex - deltaX}px)`;
 }
 
-function setTransform() {
-  carousel.style.left = `-${position - currentTranslate}px`;
-}
+function dragEnd(e) {
+  if (!isDragging) return;
+  isDragging = false;
+  const w = container.clientWidth;
+  const threshold = w / 4;
+  if (deltaX < -threshold) goToSlide(currentIndex + 1);
+  else if (deltaX > threshold) goToSlide(currentIndex - 1);
+  else goToSlide(currentIndex);
 
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
+  carousel.style.transition = "transform 0.4s ease";
+  container.releasePointerCapture(e.pointerId);
+}

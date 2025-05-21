@@ -1,6 +1,25 @@
+@mixin flexCenter($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin mobile($max: 768px) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
 @mixin center {
   margin: 0 auto;
 }
+
+@mixin textStyle($size, $weight: 400, $line: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line;
+}
+
 @mixin positionAbsolute($top) {
   position: absolute;
   left: 50%;

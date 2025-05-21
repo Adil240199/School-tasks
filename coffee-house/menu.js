@@ -1,38 +1,46 @@
 document.addEventListener("DOMContentLoaded", () => {
   const burgerButtonMain = document.querySelector(".burgerButtonMain");
-  const burgerButton = document.querySelector(".burgerButton");
   const adaptivMenu = document.querySelector(".adaptivMenu");
   const linkHeaders = document.querySelectorAll(".linkHeader");
   const navHeader = document.querySelector(".navHeader");
-
   const kinds = document.querySelectorAll(".kind");
   const buttonMore = document.querySelector(".refresh");
   const categories = document.querySelector(".catalog");
 
+  function toggleMenu() {
+    adaptivMenu.classList.toggle("menuAdaptivActive");
+    burgerButtonMain.classList.toggle("burgerButtonActive");
+    navHeader.classList.toggle("navHeaderActive");
+  }
+
+  function closeMenu() {
+    if (window.innerWidth <= 768) {
+      adaptivMenu.classList.remove("menuAdaptivActive");
+      burgerButtonMain.classList.remove("burgerButtonActive");
+      navHeader.classList.remove("navHeaderActive");
+    }
+  }
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      adaptivMenu.classList.remove("menuAdaptivActive");
+      burgerButtonMain.classList.remove("burgerButtonActive");
+      navHeader.classList.remove("navHeaderActive");
+    }
+  });
+
+  burgerButtonMain.addEventListener("click", toggleMenu);
+  linkHeaders.forEach((item) => item.addEventListener("click", closeMenu));
+
+  
+
+  // ☕️ Генерация карточек из products.json
   fetch("./products.json")
     .then((response) => {
       if (!response.ok) throw new Error("Ошибка загрузки JSON");
       return response.json();
     })
     .then((products) => {
-      function toggleMenu() {
-        const isOpen = adaptivMenu.classList.contains("menuAdaptivActive");
-        adaptivMenu.style.transform = isOpen ? "translateX(100%)" : "translateX(0%)";
-        burgerButton.classList.toggle("burgerButtonActive", !isOpen);
-        adaptivMenu.classList.toggle("menuAdaptivActive");
-        navHeader.classList.toggle("navHeaderActive");
-      }
-
-      function closeMenu() {
-        adaptivMenu.style.transform = "translateX(100%)";
-        burgerButton.classList.remove("burgerButtonActive");
-        adaptivMenu.classList.remove("menuAdaptivActive");
-        navHeader.classList.remove("navHeaderActive");
-      }
-
-      burgerButtonMain.addEventListener("click", toggleMenu);
-      linkHeaders.forEach((item) => item.addEventListener("click", closeMenu));
-
       function generateFile(category = "coffee") {
         categories.innerHTML = "";
         let localIndex = 0;
@@ -54,18 +62,19 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        buttonMore.style.display = (category === "coffee" || category === "dessert") ? "flex" : "none";
+        buttonMore.style.display =
+          category === "coffee" || category === "dessert" ? "flex" : "none";
       }
 
-      let currentActiveElement = null;
-      if (kinds.length > 0) {
-        currentActiveElement = kinds[0];
+      let currentActiveElement = kinds[0];
+      if (currentActiveElement) {
         currentActiveElement.classList.add("Kindactive");
       }
 
       kinds.forEach((item) => {
         item.addEventListener("click", () => {
-          if (currentActiveElement) currentActiveElement.classList.remove("Kindactive");
+          if (currentActiveElement)
+            currentActiveElement.classList.remove("Kindactive");
           item.classList.add("Kindactive");
           currentActiveElement = item;
 
@@ -77,7 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
       buttonMore.addEventListener("click", (e) => {
         e.preventDefault();
         buttonMore.style.display = "none";
-        document.querySelectorAll(".kindOfCoffeeHide").forEach((el) => el.classList.remove("kindOfCoffeeHide"));
+        document
+          .querySelectorAll(".kindOfCoffeeHide")
+          .forEach((el) => el.classList.remove("kindOfCoffeeHide"));
       });
 
       generateFile();

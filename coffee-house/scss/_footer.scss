@@ -74,11 +74,9 @@ footer {
     }
   }
   .blockRight {
-    padding-left: 37px;
-    padding-top: 34px;
+    padding: 34px 0 0 37px;
     @media (max-width: 768px) {
-      margin-top: 17.6%;
-      margin-bottom: 8%;
+      margin: 17.6% 0 8% 0;
       padding-left: 0;
       padding-top: 0;
     }
@@ -146,14 +144,12 @@ footer {
       }
     }
 
-    .informAndContactFirst {
-      padding-top: 20px;
-    }
+    .informAndContactFirst,
     .informAndContactLast {
       padding-top: 20px;
     }
     .iconContact {
-      margin-top: -4px;
+      width: 30px;
     }
   }
 }

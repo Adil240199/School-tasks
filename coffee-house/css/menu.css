@@ -82,13 +82,11 @@ footer .blockleft .blockIconsSocial .wrappericon svg {
   }
 }
 footer .blockRight {
-  padding-left: 37px;
-  padding-top: 34px;
+  padding: 34px 0 0 37px;
 }
 @media (max-width: 768px) {
   footer .blockRight {
-    margin-top: 17.6%;
-    margin-bottom: 8%;
+    margin: 17.6% 0 8% 0;
     padding-left: 0;
     padding-top: 0;
   }
@@ -154,14 +152,12 @@ footer .blockRight .informAndContact .schedule {
     width: 105%;
   }
 }
-footer .blockRight .informAndContactFirst {
-  padding-top: 20px;
-}
+footer .blockRight .informAndContactFirst,
 footer .blockRight .informAndContactLast {
   padding-top: 20px;
 }
 footer .blockRight .iconContact {
-  margin-top: -4px;
+  width: 30px;
 }
 
 header {
@@ -203,28 +199,35 @@ header .blocklogo .textLogo {
 }
 header .adaptivMenu {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  transform: translateX(0%);
+  transform: none;
+  transition: transform 0.5s ease;
 }
 @media (max-width: 768px) {
   header .adaptivMenu {
     min-height: max-content;
     position: absolute;
     top: 0px;
-    left: -1px;
+    left: 0;
     transform: translateX(100%);
     transition: transform 1s;
-    width: 101%;
+    height: 100vh;
     z-index: 999;
     flex-direction: column;
     background-color: rgb(225, 212, 201);
-    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  header .adaptivMenu.menuAdaptivActive {
+    transform: translateX(0%);
   }
 }
 header .navHeader {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 21px;
   width: 100%;
   max-width: 1188px;
@@ -232,12 +235,10 @@ header .navHeader {
 }
 @media (max-width: 768px) {
   header .navHeader {
-    margin-left: 0px;
     z-index: 9999;
     flex-direction: column;
     justify-content: center;
-    background-color: inherit;
-    margin-top: 154px;
+    margin-top: 5rem;
   }
 }
 header .navHeader .linkHeader {
@@ -246,13 +247,13 @@ header .navHeader .linkHeader {
   font-size: 1em;
   font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0em;
   padding-top: 6px;
 }
 @media (max-width: 768px) {
   header .navHeader .linkHeader {
-    font-size: 2em;
-    line-height: 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 20px;
   }
 }
 header nav a {
@@ -269,11 +270,8 @@ header nav a {
     margin-bottom: 22px;
   }
 }
-header .rightLinkHeader {
-  position: relative;
-}
 @media (max-width: 380px) {
-  header .rightLinkHeader .cupCoffee {
+  header .cupCoffee {
     display: block;
   }
 }
@@ -290,6 +288,7 @@ header .rightLinkHeader {
   header .rightLinkHeader {
     margin-top: 77px;
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 148px;
@@ -299,10 +298,8 @@ header .rightLinkHeader .linkMenu {
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  letter-spacing: 0em;
   text-align: left;
   color: rgb(64, 63, 61);
-  text-decoration: none;
 }
 @media (max-width: 768px) {
   header .rightLinkHeader .linkMenu {
@@ -481,6 +478,7 @@ body {
   }
 }
 .offer .kinds .kind {
+  cursor: pointer;
   width: auto;
   display: flex;
   height: 46px;
@@ -596,7 +594,7 @@ body {
 }
 
 .refresh {
-  display: none;
+  margin-left: -100%;
 }
 @media (max-width: 768px) {
   .refresh {
@@ -607,12 +605,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 38.7px 0 44px;
-  }
-}
-@media (max-width: 380px) {
-  .refresh {
-    margin: -4.3px 0 -3px;
+    margin: 38.7px auto 44px;
   }
 }
 

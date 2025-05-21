@@ -6,9 +6,6 @@
   @media (max-width: 768px) {
     margin-top: 100px;
   }
-  @media (max-width: 380px) {
-    margin-top: 101px;
-  }
   h2 {
     font-size: 3.75em;
     font-weight: 600;
@@ -32,6 +29,7 @@
     margin-top: -11px;
     padding: 0 4px 0 4px;
     position: relative;
+    touch-action: pan-y;
     @media (max-width: 768px) {
       padding: 0px;
     }
@@ -47,7 +45,7 @@
         fill: rgba(64, 63, 61, 1);
         stroke: rgba(64, 63, 61, 1);
       }
-      @media (max-width: 380px) {
+      @media (max-width: 768px) {
         display: none;
       }
     }
@@ -71,10 +69,11 @@
     }
       .carousel {
         display: flex;
-        position: relative;
         white-space: nowrap;
-        transition: all 2s ease;
-        left: 0;
+        transition: all 0.4s ease;
+        will-change: transform; 
+        touch-action: none;
+        user-select: none;  
       }
     
 
@@ -88,11 +87,10 @@
       img {
         width: 100%;
         display: block;
-        margin: 0 auto;
-        margin-top: 25px;
+        margin: 25px auto;
       }
       h5 {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
         line-height: 30px;
         letter-spacing: 0em;

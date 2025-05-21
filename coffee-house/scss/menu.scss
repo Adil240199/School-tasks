@@ -32,7 +32,7 @@ body {
   width: 100%;
   height: auto;
   position: relative;
-  @media (max-width: 768px) {
+  @include mobile {
     max-width: 688px;
   }
   @media (max-width: 380px) {
@@ -41,14 +41,14 @@ body {
 }
 
 .brDesktop {
-  @media (max-width: 768px) {
+  @include mobile {
     display: none;
   }
 }
 
 .brTablet {
   display: none;
-  @media (max-width: 768px) {
+  @include mobile {
     display: block;
   }
   @media (max-width: 380px) {
@@ -92,6 +92,7 @@ body {
     }
 
     .kind {
+      cursor: pointer;
       width: auto;
       display: flex;
       height: 46px;
@@ -138,7 +139,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
-  @media (max-width: 768px) {
+  @include mobile {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 40px;
@@ -204,7 +205,7 @@ body {
     }
   }
 
-  @media (max-width: 768px) {
+  @include mobile {
     .kindOfCoffeeHide {
       display: none;
     }
@@ -212,18 +213,13 @@ body {
 }
 
 .refresh {
-  display: none;
-  @media (max-width: 768px) {
+  margin-left: -100%;
+  @include mobile {
     width: 60px;
     height: 60px;
     border-radius: 100px;
     border: 1px solid rgba(102, 95, 85, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 38.7px 0 44px;
-  }
-  @media (max-width: 380px) {
-    margin: -4.3px 0 -3px;
+    @include flexCenter(center);
+    margin: 38.7px auto 44px;
   }
 }
