@@ -29,10 +29,8 @@ body {
   bottom: 1%;
   width: 40%;
   height:auto;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   background: hsla(205, 100%, 69%, 0.7);
-
   border-radius: 5px;
   opacity:0; 
   transition: 1s;
@@ -58,9 +56,8 @@ body {
 }
 .todo{
   float: left;
-  margin-left: 20px;
+  margin: 20px 0 0 20px;
   height: 200px;
-  margin-top: 20px;
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
@@ -79,19 +76,19 @@ h5{
   font-weight: bold;
 }
 .setting{
-position: absolute;
-top: 1%;
-width:40%;
-height:auto;
-background: hsla(205, 100%, 69%, 0.7);
-color:#fff;
-font-size:25px;
-border:3px solid #2BA2DB;
-padding:20px;
-border-radius: 10px;
-opacity:0; 
-transition: 1s;
-z-index: -100;
+  position: absolute;
+  top: 1%;
+  width:40%;
+  height:auto;
+  background: hsla(205, 100%, 69%, 0.7);
+  color:#fff;
+  font-size:25px;
+  border:3px solid #2BA2DB;
+  padding:20px;
+  border-radius: 10px;
+  opacity:0; 
+  transition: 1s;
+  z-index: -100;
 }
 .visible{
   opacity:1;
@@ -119,8 +116,7 @@ z-index: -100;
   outline: none;
   display: inline-block;
   cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 80%;
   height: 30px;
   border-radius: 10px;
@@ -132,9 +128,7 @@ z-index: -100;
 .hiden-block{
   list-style: none;
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
+  margin: 50px auto;
 }
 .item-hiden-block{
   margin-bottom: 50px;
@@ -349,7 +343,6 @@ z-index: -100;
 
 
 .weather {
- 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -503,6 +496,22 @@ z-index: -100;
 
 
 @media (max-width: 768px) {
+  .todo_list {
+    position: fixed;
+    bottom: 2%;
+    left: 5%;
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .setting {
+    position: fixed;
+    top: 2%;
+    left: 5%;
+    width: 90%;
+    font-size: 18px;
+    padding: 15px;
+  }
   .time {
     min-height: 80px;
     font-size: 72px;
